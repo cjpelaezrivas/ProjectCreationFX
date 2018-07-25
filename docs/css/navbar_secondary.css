@@ -1,0 +1,39 @@
+.navbar_secondary {
+	display: block;
+	width: 100%;
+
+	margin-top: 25px;
+}
+
+.navbar_secondary .menu_secondary {
+	padding-bottom:30px;
+
+	text-align:center;
+	border-bottom: 1px solid #dcdcc8;
+}
+
+.navbar_secondary .menu_secondary .menuItem {
+	padding: 20px 15px;
+
+	min-width: 250px;
+
+	color: #151616;
+	border-bottom: solid 5px transparent;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.navbar_secondary .menu_secondary .menuItem:hover {
+	background-color: #EFEFEF;
+	color: #151616;
+	border-bottom: solid 5px #003379;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 620px) {
+	.navbar_secondary .menu_secondary .menuItem {
+		display: block;
+		text-align: center;
+		padding: 8px 0;
+	}
+}

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Basic tutorial</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<meta charset="utf-8" />
+<meta http-equiv="content-type" content="text/html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="Carlos J. Peláez Rivas" />
+<meta name="description" content="Project Creation FX game engine" />
+<meta name="keywords" content="engine, framework, game, games, videogames, 2d, java, javafx, coding, code, development, programming, carlos, jesús, jesus, peláez, pelaez, rivas, cjpelaez, cjpelaezrivas, lazarus, prlazarus, project, creation, fx, projectcreationfx, málaga, malaga, uma, españa, spain" />
+
+<link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/lightbox.min.css"/>
+
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<link rel="stylesheet" type="text/css" href="css/toc.css"/>
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print"/>
+
+<script src="js/scroll.js"></script>
+<script src="js/lightbox.min.js"></script> <!-- http://lokeshdhakar.com/projects/lightbox2/ -->
+<script>
+	lightbox.option({
+	  'fadeDuration': 250,
+	  'resizeDuration': 250,
+	  'wrapAround': true
+	})
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74491738-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-74491738-4');
+</script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/navbar.css"/>
+
+<div id="navbar" class="alwaysSmaller">
+	<div id="logo">
+		<a href="./"><img src="images/logo.png"/></a>
+	</div>
+
+	<div id="menu">
+		<div id="menuToggler">
+			<i class="fa fa-bars"></i>
+		</div>
+		<div id="menuItems">
+			<a class="menuItem" href="./"><i class="fa fa-home"></i> Home</a>
+			<a class="menuItem" href="md_downloads.html"><i class="fa fa-download"></i> Downloads</a>
+			<a class="menuItem" href="md_tutorial_basic.html"><i class="fa fa-life-ring"></i> Tutorials</a>
+			<a class="menuItem" href="https://github.com/cjpelaezrivas/ProjectCreationFX/issues"><i class="fa fa-bug"></i> Issues and bugs</a>
+			<a class="menuItem" href="md_license.html"><i class="fa fa-balance-scale"></i> License</a>
+		</div>
+	</div>
+
+	<script src="js/navbar.js"></script>
+</div>
+<link rel="stylesheet" type="text/css" href="css/navbar_secondary.css"/>
+
+<div class="navbar_secondary">
+	<div class="menu_secondary">
+		<a class="menuItem" href="md_tutorial_basic.html"><i class="fa fa-gear"></i> Basic tutorial</a>
+		<a class="menuItem" href="md_tutorial_advance.html"><i class="fa fa-gears"></i> Advanced tutorial</a>
+		<a class="menuItem" href="md_wiki.html"><i class="fa fa-book"></i> Wiki</a>
+	</div>
+</div>
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Basic tutorial</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#getting-started">Getting started</a></li>
+<li><a href="#creating-your-first-project">Creating your first project</a></li>
+<li><a href="#project-basic-structure">Project basic structure</a></li>
+</ul>
+</div>
+
+<!-- [wiki_imanager]: -->
+<!-- [wiki_point_sound]: -->
+<!-- [wiki_sound]: -->
+<!-- [wiki_sound_resource]: -->
+<p>This is an initial tutorial to learn the basic features of <a href="./">Project Creation FX</a>. Following the next steps you will be able to create your first project and start using this library.</p>
+<div id="getting-started" class="section level2">
+<h2>Getting started</h2>
+<p>The very first thing you have to do is download the library from the <a href="md_downloads.html">downloads page</a>. You can choose any version, but it is recommended to get the last one. As a general rule, all tutorials and information on this page will be updated to the last version, so tutorials and wiki could not be coherent with older versions.</p>
+<p>Once you have downloaded the library, you have to add it to your project path. It uses to be easy, in Eclipse for example, just go to <em>Java Build Path</em> in project properties and add the downloaded <code>JAR</code> in <em>Libraries</em> tab.</p>
+<p><div class="block info icon fa-thumbs-o-up"> <strong>Keep in mind:</strong> Java 8 or later is needed. </div></p>
+<p>Now you are ready to start coding.</p>
+</div>
+<div id="creating-your-first-project" class="section level2">
+<h2>Creating your first project</h2>
+<p>The best way to start is trying to create something simple. What about the simplest possible project?</p>
+<p>Creating this project can be the best way to check that everything is working fine. This is the simplest (<em>minimal</em>) project you can create with <a href="./">Project Creation FX</a>. From here, you only can go up <i class="fa fa-smile-o"></i>.</p>
+<div id="prminimal.java" class="section level5">
+<h5>prMinimal.java</h5>
+<pre class="java"><code>import tk.prlazarus.projectcreationfx.engine.MainManagerAdapter;
+import tk.prlazarus.projectcreationfx.engine.gamestates.GameStateManager;
+
+public class prMinimal extends MainManagerAdapter {
+
+    @Override
+    public void statesCreation() {
+        GameStateManager.Instance().addGameState(&quot;minimal&quot;, new MinimalState());
+        GameStateManager.Instance().changeGameState(&quot;minimal&quot;);
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}</code></pre>
+</div>
+<div id="minimalstate.java" class="section level5">
+<h5>MinimalState.java</h5>
+<pre class="java"><code>import tk.prlazarus.projectcreationfx.engine.gamestates.GameState;
+import tk.prlazarus.projectcreationfx.engine.graphics.GraphicsAdapter;
+
+public class MinimalState extends GameState {
+
+}</code></pre>
+<p>I know this is a black screen, but if you didn’t get any errors: it works!</p>
+<p>OK, let’s check what have you done. In the previous example you created a main class that extends from <a href="md_wiki_main_manager_adapter.html"><code>MainManagerAdapter</code></a>. This father class offers implemented all the not required methods. The only function you are forced to implement here is <code>statesCreation()</code>. This method is used to declare all <a href="md_wiki_game_state.html">game states</a> the game is going to use. Also, you have to select an initial states using <code>changeGameState()</code> method or you will get an exception.</p>
+<p>The state is even simpler than the main class. It only has to extend from <a href="md_wiki_game_state.html"><code>GameState</code></a>. That’s all. The <a href="md_wiki_game_state.html"><code>GameState</code></a> father class implements all the methods that are used by the engine. Naturally, you can override some methods here, but let’s leave that for later.</p>
+</div>
+</div>
+<div id="project-basic-structure" class="section level2">
+<h2>Project basic structure</h2>
+
+<style>
+.more_content {
+	margin: 0 25px;
+
+	font-size:18px;
+	text-align:center;
+
+	border:1px solid #999999;
+	border-radius:4px;
+	color:#666666;
+	background-color:#DDDDDD;
+}
+</style>
+
+<div class="more_content" >
+	<i class="fa fa-spinner fa-pulse"></i>
+	More content in progress...
+</div>
+
+</div>
+
+<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+
+<div class="message" style="padding: 10px 0 25px 0">
+	Found an error or misspell? <a href="mailto:cjpelaezrivas@gmail.com"> Email me to correct it</a>. Thank you.
+</div>
+<div class="footer">
+	<div class="content">
+		<div id="logo">
+			<a href="http://prlazarus.tk"><img src="images/logo_prlazarus.png"/></a>
+		</div>
+		<div id="text">
+			Project Creation FX has been coded by <a href="http://prlazarus.tk">prLázarus</a><br>
+			<i class="fa fa-plug"></i> <i>Site powered by <a href="http://rmarkdown.rstudio.com/index.html">R Markdown</a> and <a href="https://pages.github.com/">GitHub Pages</a></i>
+		</div>
+	</div>
+</div>
+
+<script src="js/toc.js"> </script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+
+</body>
+</html>
