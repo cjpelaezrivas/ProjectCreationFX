@@ -54,6 +54,7 @@ body {
 
 code {
 	white-space: inherit !important;
+	font-family: consolas, monospace !important;
 }
 
 .main-container {

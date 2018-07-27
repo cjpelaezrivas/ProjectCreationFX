@@ -31,9 +31,19 @@
 }
 
 @media screen and (max-width: 620px) {
+	.navbar_secondary .menu_secondary {
+		padding-bottom:15px;
+	}
+
 	.navbar_secondary .menu_secondary .menuItem {
 		display: block;
 		text-align: center;
-		padding: 8px 0;
+		padding: 5px 0;
+
+		border-bottom: solid 3px transparent;
+	}
+
+	.navbar_secondary .menu_secondary .menuItem:hover {
+		border-bottom: solid 3px #003379;
 	}
 }

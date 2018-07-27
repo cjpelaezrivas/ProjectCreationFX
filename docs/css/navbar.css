@@ -65,7 +65,7 @@
 	text-decoration: none;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
 	#navbar #logo.showMenu img, #navbar.smaller #logo img, #navbar.alwaysSmaller #logo img {
 		height: 60px;
 	}
@@ -101,6 +101,12 @@
 	#navbar #menu .menuItem {
 		display: block;
 		text-align: center;
-		padding: 8px 0;
+		padding: 5px 0;
+
+		border-bottom: solid 3px transparent;
+	}
+
+	#navbar #menu .menuItem:hover {
+		border-bottom: solid 3px #003379;
 	}
 }
