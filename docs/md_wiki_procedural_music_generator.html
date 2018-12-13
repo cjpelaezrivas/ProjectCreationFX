@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="pandoc" />
+
+		
+	
+	
+	<title>Procedural Music Generator</title>
+
+			<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+			<meta charset="utf-8" />
+<meta http-equiv="content-type" content="text/html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="Carlos J. Peláez Rivas" />
+<meta name="description" content="Project Creation FX game engine" />
+<meta name="keywords" content="engine, framework, game, games, videogames, 2d, java, javafx, coding, code, development, programming, carlos, jesús, jesus, peláez, pelaez, rivas, cjpelaez, cjpelaezrivas, lazarus, prlazarus, project, creation, fx, projectcreationfx, málaga, malaga, uma, españa, spain" />
+
+<link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/lightbox.min.css"/>
+
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<link rel="stylesheet" type="text/css" href="css/toc.css"/>
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print"/>
+
+<script src="js/scroll.js"></script>
+<script src="js/lightbox.min.js"></script> <!-- http://lokeshdhakar.com/projects/lightbox2/ -->
+<script>
+	lightbox.option({
+	  'fadeDuration': 250,
+	  'resizeDuration': 250,
+	  'wrapAround': true
+	})
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74491738-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-74491738-4');
+</script>
+	
+	
+			<style type="text/css">code{white-space: pre;}</style>
+		<style type="text/css">
+			div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+					</style>
+
+					<style type="text/css">
+				pre:not([class]) {
+					background-color: white;
+				}
+			</style>
+			
+	
+			<style type="text/css">
+			h1 {
+				font-size: 34px;
+			}
+			h1.title {
+				font-size: 38px;
+			}
+			h2 {
+				font-size: 30px;
+			}
+			h3 {
+				font-size: 24px;
+			}
+			h4 {
+				font-size: 18px;
+			}
+			h5 {
+				font-size: 16px;
+			}
+			h6 {
+				font-size: 12px;
+			}
+			.table th:not([align]) {
+				text-align: left;
+			}
+					</style>
+	
+	
+</head>
+
+<body>
+
+			<style type = "text/css">
+			.main-container {
+				max-width: 940px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			code {
+				color: inherit;
+				background-color: rgba(0, 0, 0, 0.04);
+			}
+			img {
+				max-width:100%;
+				height: auto;
+			}
+			.tabbed-pane {
+				padding-top: 12px;
+			}
+			button.code-folding-btn:focus {
+				outline: none;
+			}
+		</style>
+
+		
+		<div class="container-fluid main-container">
+
+		<!-- tabsets -->
+		<script>
+			$(document).ready(function () {
+				window.buildTabsets("TOC");
+			});
+		</script>
+
+		<!-- code folding -->
+		
+			
+			<link rel="stylesheet" type="text/css" href="css/navbar.css"/>
+
+<div id="navbar" class="alwaysSmaller">
+	<div id="logo">
+		<a href="./"><img src="images/logo.png"/></a>
+	</div>
+
+	<div id="menu">
+		<div id="menuToggler">
+			<i class="fa fa-bars"></i>
+		</div>
+		<div id="menuItems">
+			<a class="menuItem" href="./"><i class="fa fa-home"></i> Home</a>
+			<a class="menuItem" href="md_downloads.html"><i class="fa fa-download"></i> Downloads</a>
+			<a class="menuItem" href="md_tutorial_basic.html"><i class="fa fa-life-ring"></i> Tutorials</a>
+			<a class="menuItem" href="https://github.com/cjpelaezrivas/ProjectCreationFX/issues"><i class="fa fa-bug"></i> Issues and bugs</a>
+			<a class="menuItem" href="md_license.html"><i class="fa fa-balance-scale"></i> License</a>
+		</div>
+	</div>
+
+	<script src="js/navbar.js"></script>
+</div>
+			<div class="no-decoration" style="padding-top:10px;">
+	<a href="md_wiki.html"><i class="fa fa-arrow-left"></i> Back to Project Creation FX Wiki index</a>
+</div>
+			<link rel="stylesheet" type="text/css" href="css/progressBar.css"/>
+
+<div class="progressBarContainer">
+	<div class="progressBar">
+	</div>
+</div>
+
+<script src="js/progressBar.js"></script>
+	
+			<div class="fluid-row" id="header">
+
+				
+						<h1 class="title toc-ignore">Procedural Music Generator</h1>
+				<!--
+				-->
+				<!--
+				-->
+				<!--
+				-->
+	
+			</div>
+	
+			<div id="info" class="packageInfo">
+<b>Extends from: </b>java.lang.Thread<br><b>Is used in: </b><a href="md_wiki_sound_manager.html">Sound Manager</a><br><b>Uses: </b> <a href="md_wiki_sound_resource.html">Sound Resource</a><br>
+</div>
+	
+						<div id="TOC">
+									<span class="title">Table of content</span>
+								<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#getting-started">Getting started</a><ul>
+<li><a href="#song">Song</a></li>
+<li><a href="#trackslist-and-file">Trackslist and file</a></li>
+<li><a href="#state-list-and-state">State list and state</a></li>
+</ul></li>
+<li><a href="#basic-use-of-procedural-music-generator">Basic use of Procedural Music Generator</a><ul>
+<li><a href="#next-state-methods">Next state methods</a></li>
+<li><a href="#change-state-now-methods">Change state now methods</a></li>
+<li><a href="#closing-procedural-music-generator">Closing Procedural Music Generator</a></li>
+</ul></li>
+<li><a href="#advance-use-of-procedural-music-generator">Advance use of Procedural Music Generator</a><ul>
+<li><a href="#change-track-volume">Change track volume</a></li>
+<li><a href="#change-track-balance">Change track balance</a></li>
+<li><a href="#state-change-events">State change events</a></li>
+<li><a href="#next-state-conditions">Next state conditions</a></li>
+</ul></li>
+</ul>
+			</div>
+			
+	<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>Procedural Music Generator (PMG) is a basic procedural music system that uses states to play music or sounds in your games. This system can be used with <a href="./">Proyect Creation FX</a> or as an add-on in other projects.</p>
+<p>PMG uses a custom <code>xml</code> format to load and play songs. Each song has different states, that will let the system to evolve and react to programmer inputs or game events. Moreover, you can determinate which will be the next state using a uniform <em>random</em> distribution.</p>
+</div>
+<div id="getting-started" class="section level2">
+<h2>Getting started</h2>
+<p>Firs of all, you will need to define a song using an <code>xml</code> file with the next structure:</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span>
+<span class="kw">&lt;song&gt;</span>
+    <span class="kw">&lt;trackslist&gt;</span>
+        <span class="kw">&lt;track</span><span class="ot"> name=</span><span class="st">&quot;track1&quot;</span><span class="ot"> volume=</span><span class="st">&quot;1.0&quot;</span><span class="ot"> balance=</span><span class="st">&quot;0.0&quot;</span><span class="kw">&gt;</span>
+            <span class="kw">&lt;file</span><span class="ot"> source=</span><span class="st">&quot;file1&quot;</span><span class="kw">/&gt;</span>
+        <span class="kw">&lt;/track&gt;</span>
+        [...]
+    <span class="kw">&lt;/trackslist&gt;</span>
+    <span class="kw">&lt;statelist&gt;</span>
+        <span class="kw">&lt;state</span><span class="ot"> index=</span><span class="st">&quot;0&quot;</span> <span class="kw">&gt;</span>
+            <span class="kw">&lt;tracks&gt;</span>
+                <span class="kw">&lt;track</span><span class="ot"> name=</span><span class="st">&quot;track1&quot;</span><span class="ot"> volume=</span><span class="st">&quot;1.0&quot;</span><span class="ot"> balance=</span><span class="st">&quot;0.0&quot;</span><span class="kw">/&gt;</span>
+                [...]
+            <span class="kw">&lt;/tracks&gt;</span>
+        <span class="kw">&lt;/state&gt;</span>
+        [...]
+    <span class="kw">&lt;/statelist&gt;</span>
+<span class="kw">&lt;/song&gt;</span></code></pre></div>
+<div id="song" class="section level3">
+<h3>Song</h3>
+<p>A song is made of a <code>tracklist</code> and a <code>statelist</code> element. Both of them are made-up of simpler parts, called <code>track</code> and <code>state</code>.</p>
+</div>
+<div id="trackslist-and-file" class="section level3">
+<h3>Trackslist and file</h3>
+<p>All sound files have to be declared as a <code>track</code> giving it a <code>name</code> and the used <code>file</code> element. The path to the file is specified from the <code>xml</code> file to the sound file. <strong>This is a relative path</strong>. Moreover, here you can specify the volume (decimal value between 0 and 1) and balance (decimal values between -1 and 1) for each track. Both of these values are optional.</p>
+<p><div class="block info icon fa-info"> It is possible to use <code>.wav</code> and <code>.ogg</code> sound files. </div></p>
+</div>
+<div id="state-list-and-state" class="section level3">
+<h3>State list and state</h3>
+<p>To create a <code>state</code> you must specify an <code>index</code>, which works as a name or id. There are others attributes you can use:</p>
+<ul>
+<li><code>initialState</code> <br> Marks this state as the initial state. The value must be a <code>true</code> or <code>false</code>. If more than one state is marked, only the last mark is used. If any state is marked, the first declared state is used as initial state.</li>
+<li><code>nextState</code> <br> Indicates the <code>index</code> of the next state to be played. If this attribute is not specified, the process will remain in the same state. None next state means an infinite loop.</li>
+<li><code>numReplays</code> <br> Shows how many times a state has to played before change to the next state. This attribute is ignored if none next state is specified.</li>
+</ul>
+<p>A <code>state</code> has one or more <code>track</code> elements. All <code>track</code> must be inside a <code>tracks</code> label. To add a <code>track</code> to the <code>state</code>, you must indicate its <code>name</code>. This name has to be declared in the <code>trackslist</code> section as a <code>track</code>. In this section you can specify a custom volume and balance value just for this track instance in the same way you did in the previous section.</p>
+<p><div class="block warning icon fa-exclamation"> <strong>Caution:</strong> If you try to use a non-declared <code>track</code>, you will get an exception. </div></p>
+</div>
+</div>
+<div id="basic-use-of-procedural-music-generator" class="section level2">
+<h2>Basic use of Procedural Music Generator</h2>
+<p>The first step is to declare a valid <code>xml</code> file. You can find here an example that uses two sounds and three states:</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span>
+<span class="kw">&lt;song</span><span class="ot"> threadSleepTime=</span><span class="st">&quot;15&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;trackslist&gt;</span>
+        <span class="kw">&lt;track</span><span class="ot"> name=</span><span class="st">&quot;piano&quot;</span><span class="kw">&gt;</span>
+            <span class="kw">&lt;file</span><span class="ot"> source=</span><span class="st">&quot;files/piano.wav&quot;</span><span class="kw">/&gt;</span>
+        <span class="kw">&lt;/track&gt;</span>
+        <span class="kw">&lt;track</span><span class="ot"> name=</span><span class="st">&quot;chords&quot;</span><span class="kw">&gt;</span>
+            <span class="kw">&lt;file</span><span class="ot"> source=</span><span class="st">&quot;files/chords.wav&quot;</span><span class="kw">/&gt;</span>
+        <span class="kw">&lt;/track&gt;</span>
+    <span class="kw">&lt;/trackslist&gt;</span>
+    <span class="kw">&lt;statelist&gt;</span>
+        <span class="kw">&lt;state</span><span class="ot"> index=</span><span class="st">&quot;a&quot;</span><span class="ot"> initialState=</span><span class="st">&quot;true&quot;</span><span class="ot"> nextState=</span><span class="st">&quot;b&quot;</span><span class="kw">&gt;</span>
+            <span class="kw">&lt;tracks&gt;</span>
+                <span class="kw">&lt;track</span><span class="ot"> name=</span><span class="st">&quot;piano&quot;</span><span class="kw">/&gt;</span>
+            <span class="kw">&lt;/tracks&gt;</span>
+        <span class="kw">&lt;/state&gt;</span>
+        <span class="kw">&lt;state</span><span class="ot"> index=</span><span class="st">&quot;b&quot;</span><span class="ot"> nextState=</span><span class="st">&quot;c&quot;</span><span class="ot"> numReplays=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>
+            <span class="kw">&lt;tracks&gt;</span>
+                <span class="kw">&lt;track</span><span class="ot"> name=</span><span class="st">&quot;chords&quot;</span><span class="kw">/&gt;</span>
+            <span class="kw">&lt;/tracks&gt;</span>
+        <span class="kw">&lt;/state&gt;</span>
+        <span class="kw">&lt;state</span><span class="ot"> index=</span><span class="st">&quot;c&quot;</span><span class="kw">&gt;</span>
+            <span class="kw">&lt;tracks&gt;</span>
+                <span class="kw">&lt;track</span><span class="ot"> name=</span><span class="st">&quot;piano&quot;</span><span class="kw">/&gt;</span>
+                <span class="kw">&lt;track</span><span class="ot"> name=</span><span class="st">&quot;chords&quot;</span><span class="kw">/&gt;</span>
+            <span class="kw">&lt;/tracks&gt;</span>
+        <span class="kw">&lt;/state&gt;</span>
+    <span class="kw">&lt;/statelist&gt;</span>
+<span class="kw">&lt;/song&gt;</span></code></pre></div>
+<p>As you can see in this example, the file has three states. First and second states play only one track, and the third one plays both tracks at the same time creating a mix. Each state force the program to go to the next one until it reaches the last state. The program will remain in this state until we force a change or the program ends.</p>
+<p><div class="block note icon fa-cloud-download"> You can download the sound resource for <a href="https://www.looperman.com/loops/detail/112121/happy-piano-riff-by-cbeatz-free-140bpm-chill-out-piano-loop">piano</a> and <a href="https://www.looperman.com/loops/detail/112122/happy-chords-slowed-by-cbeatz-free-140bpm-chill-out-piano-loop">chords</a>. </div></p>
+<p>Once you have the <code>xml</code> file, the next step is to declare a <code>ProceduralMusicGenerator</code> object. Then, you must load the <code>xml</code> file, launch the thread and play your mix:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java">SoundResource.<span class="fu">init</span>(); <span class="co">// Initialize TinySound library</span>
+
+ProceduralMusicGenerator pmg = <span class="kw">new</span> <span class="fu">ProceduralMusicGenerator</span>();
+pmg.<span class="fu">launchThread</span>(); <span class="co">// This launches the PMG thread</span>
+pmg.<span class="fu">loadSong</span>(<span class="st">&quot;XML file&quot;</span>);
+pmg.<span class="fu">playMusic</span>();</code></pre></div>
+<p><div class="block warning icon fa-exclamation"> Be sure that the main thread keeps running. If main thread is closed, <code>ProceduralMusicGenerator</code>’s thread will close too. </div></p>
+<p>Take note that there are two <code>loadSong()</code> methods. The first one accepts a <code>String</code> as its argument and you should use this one if you want to load a file from outside the <code>src</code> directory (<em>an external resource</em>). The other one should be used if you want to load a file from inside the <code>src</code> folder (<em>an internal resource</em>), so you must specify the file path as a <code>java.net.URL</code>. The main limitation of this, is that all sound resources used should be loaded in the same way that the song <code>xml</code> file is loaded. <strong>You can not load an internal <code>xml</code> file that uses external sound resources or an internal <code>xml</code> file that uses external sound resources.</strong></p>
+<p>This module uses <a href="https://github.com/finnkuusisto/TinySound">TinySound</a> library, so you must initialize and close it using the appropriate methods found in <code>SoundResource</code>. Here an example:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java">SoundResource.<span class="fu">init</span>(); <span class="co">// Initialize TinySound library</span>
+SoundResource.<span class="fu">shutdown</span>(); <span class="co">// Close TinySound library</span></code></pre></div>
+<p><div class="block info icon fa-info"> You can use original TinySound’s methods to initialize and close in the same way. These methods are simply an interface. </div></p>
+<p>You can stop and play the music again using:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java">pmg.<span class="fu">stopMusic</span>();
+
+pmg.<span class="fu">setManualNextState</span>(<span class="st">&quot;State name&quot;</span>);
+pmg.<span class="fu">playMusic</span>();</code></pre></div>
+<p><div class="block info icon fa-check"> Could be a good idea to indicate the next state just before resume the music. Due to a possible next state condition, the music could starts in a different expected state. </div></p>
+<p>Now you are able to listen, stop and resume music using Procedural Music Generator. Depending of your <code>xml</code> file, the program will remain in the same state or will jump to the the next state once all the conditions are accomplished.</p>
+<div id="next-state-methods" class="section level3">
+<h3>Next state methods</h3>
+<p>Your system may be blocked in a state or you may want to change to a different state that is not the indicated by the actual state. In both cases you can use <code>setManualNextState</code> methods and the system will jump to that new state when the actual state finishes.</p>
+<ul>
+<li><strong><code>setManualNextState(String nextState)</code></strong> <br> Changes the next state. The program will jump to the indicated state once all the tracks in actual state finish and the <code>numReplays</code> parameter is fulfilled.</li>
+<li><strong><code>setManualNextState(String nextState, boolean waitEndActualState)</code></strong> <br> Changes the next state. The program will jump to the indicated state once all the tracks in actual state finish if you indicate so using the parameters. If you indicate not to wait, the program will change the state ignoring the <code>numReplays</code> parameter.</li>
+</ul>
+</div>
+<div id="change-state-now-methods" class="section level3">
+<h3>Change state now methods</h3>
+<p>In some cases you need to change the state immediately and do not wait till the tracks finish. Using the next methods you can do it.</p>
+<ul>
+<li><strong><code>changeStateNow(String state, boolean rewindState)</code></strong> <br> Changes to next state immediately and ensure that the all tracks in new state will start from the beginning. If you choose <code>false</code> on <code>rewindState</code> parameter, the state will continue from the same place if was the last time is was played, or from the beginning in other case.</li>
+<li><strong><code>changeStateNow(String state, Double transitionSpeed)</code></strong> <br> Changes to next state using a volume transition. You can specify the speed of this change using the parameter. This value represents the amount of volume that is subtracted and added in each update. If this value is smaller or equal to zero, the change will be ignored.</li>
+<li><strong><code>changeStateNow(String state, Double transitionSpeed, boolean rewindState)</code></strong> <br> Changes to next state using a volume transition, but lets indicate if the new tracks must be start from the beginning.</li>
+<li><strong><code>changeStateNow(String state, long transitionTime)</code></strong> <br> Change to next state using a volume transition. In this case, you can indicate how much time (in milliseconds) will be needed to complete the transition. If the time value is smaller or equal to zero, the transition will be instant.</li>
+<li><strong><code>changeStateNow(String state, long transitionTime, boolean rewindState)</code></strong> <br> Change to next state using a volume transition, but lets indicate if the new tracks must be start from the beginning.</li>
+</ul>
+<p><div class="block warning icon fa-exclamation"> <strong>Caution:</strong> You may get audio artifacts using these methods. It could be a good idea to use transition methods. </div></p>
+</div>
+<div id="closing-procedural-music-generator" class="section level3">
+<h3>Closing Procedural Music Generator</h3>
+<p>Before close your program it could be a good idea to close PMG thread. You can do it in this way:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java">pmg.<span class="fu">close</span>();
+SoundResource.<span class="fu">shutdown</span>();</code></pre></div>
+<p><div class="block info icon fa-check"> This could be a good place to close sound libraries too. </div></p>
+<p><div class="block warning icon fa-exclamation"> <strong>Caution:</strong> You will get an exception if you try to use PMG thread after you close it. </div></p>
+<p>As you can see, this program can be really powerful if you have the right sound resources. Loop audio files could be sometimes hard to find, but if you can compose, create or download some of them, you will be able to create awesome mixes.</p>
+<p>Now it’s time to see some advance features of PMG.</p>
+</div>
+</div>
+<div id="advance-use-of-procedural-music-generator" class="section level2">
+<h2>Advance use of Procedural Music Generator</h2>
+<p>Once you know the basic features of PMG it’s time to do something more special. These are the current advance features:</p>
+<div id="change-track-volume" class="section level3">
+<h3>Change track volume</h3>
+<p>Using this feature you can change a given track volume using its name. These are the methods you can use to accomplish this.</p>
+<ul>
+<li><strong><code>changeTrackVolume(String track, double volumeObjective, double speed) {</code></strong> <br> Changes the given <code>track</code> volume to the given <code>objective value</code>. The third parameter indicates the <code>speed</code> of that change. Take note that the volume values are doubles in range [0, 1]. In case <code>speed</code> is lower than or equal to zero, this method does nothing.</li>
+<li><strong><code>changeTrackVolume(String trackName, double volumeObjective, long transitionTime)</code></strong> <br> Changes the given <code>track</code> volume to the given <code>objective value</code>. The third parameter indicates the <code>time</code> of that change in milliseconds. Take note that the volume values are doubles in range [0, 1]. In case <code>time</code> is lower than or equal to zero, the change will be immediate.</li>
+</ul>
+<p><div class="block warning icon fa-exclamation"> All track changes done using these methods will continue being effective in other states that use the same tracks. </div></p>
+</div>
+<div id="change-track-balance" class="section level3">
+<h3>Change track balance</h3>
+<p>This feature is very similar to the one that changes the track volume. In this case these methods change the balance of a given track. These are the methods you can use to accomplish this.</p>
+<ul>
+<li><strong><code>changeTrackBalance(String track, double volumeObjective, double speed) {</code></strong> <br> Changes the given <code>track</code> balance to the given <code>objective value</code>. The third parameter indicates the <code>speed</code> of that change. Take note that the balance values are doubles in range [-1, 1]. In case <code>speed</code> is lower than or equal to zero, this method does nothing.</li>
+<li><strong><code>changeTrackBalance(String trackName, double volumeObjective, long transitionTime)</code></strong> <br> Changes the given <code>track</code> balance to the given <code>objective value</code>. The third parameter indicates the <code>time</code> of that change in milliseconds. Take note that the balance values are doubles in range [-1, 1]. In case <code>time</code> is lower than or equal to zero, the change will be immediate.</li>
+</ul>
+<p><div class="block warning icon fa-exclamation"> All track changes done using these methods will continue being effective in other states that use the same tracks. </div></p>
+</div>
+<div id="state-change-events" class="section level3">
+<h3>State change events</h3>
+<p>In some cases, you may want to know when there is a state change. Using <code>StateChangeEvent</code> interface you can create listeners and they will be executed once the event is launched. In <code>stateChange</code> function you have all information you need: the old and new states, and if the event has been automatic or forced by the user. Here a little example to see how to use it:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java">pmg.<span class="fu">addStateChangeEvent</span>(<span class="kw">new</span> <span class="fu">StateChangeEvent</span>() {
+    <span class="at">@Override</span>
+    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">stateChange</span>(MusicState lastState, MusicState actualState, <span class="dt">boolean</span> changedByUser) {
+        <span class="co">// TODO Your code goes here</span>
+    }
+});</code></pre></div>
+<p>Of course you can use Java 8 lambda expressions:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java">pmg.<span class="fu">addStateChangeEvent</span>((lastState, actualState, changedByUser) -&gt; {
+    <span class="co">// TODO Your code goes here</span>
+});</code></pre></div>
+</div>
+<div id="next-state-conditions" class="section level3">
+<h3>Next state conditions</h3>
+<p>The <code>nextStateCondition</code> label is a element that can be added to a state to get some randomness in the mix. When this element is used, the <code>nextState</code> state property is ignored. This element lets declare more than one possible next state and indicate with which probability the system will jump to that state.</p>
+<p>It is used a uniform function distribution to calculate the next state. In case the conditions do not cover all the possible values (the accumulative sum of all of them is lower than 1), the next state will be the actual state.</p>
+<p>To use this feature you only have to add to the desired state the <code>nextStateCondition</code> element with the desired configuration. Here you can see an example with two possible states and with different probabilities.</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;state</span><span class="ot"> index=</span><span class="st">&quot;state1&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;nextStateCondition&gt;</span>
+        <span class="kw">&lt;case</span><span class="ot"> state=</span><span class="st">&quot;state2&quot;</span><span class="ot"> probability=</span><span class="st">&quot;0.75&quot;</span><span class="kw">/&gt;</span>
+        <span class="kw">&lt;case</span><span class="ot"> state=</span><span class="st">&quot;state3&quot;</span><span class="ot"> probability=</span><span class="st">&quot;0.25&quot;</span><span class="kw">/&gt;</span>
+    <span class="kw">&lt;/nextStateCondition&gt;</span>
+    <span class="kw">&lt;tracks&gt;</span>
+        <span class="kw">&lt;track</span><span class="ot"> name=</span><span class="st">&quot;track1&quot;</span><span class="kw">/&gt;</span>
+    <span class="kw">&lt;/tracks&gt;</span>
+<span class="kw">&lt;/state&gt;</span></code></pre></div>
+<p><div class="block info icon fa-info"> A different probability value is calculated each time a state change is executed. </div></p>
+</div>
+</div>
+
+	
+			<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+
+<div class="message">
+	Found an error or misspell? <a href="mailto:corrections@prlazarus.tk"> Email me to correct it</a>. Thank you.
+</div>
+<div class="footer">
+	<div class="content">
+		<div id="logo_footer">
+			<a href="http://prlazarus.tk"><img src="images/logo_prlazarus.png" alt="prLázarus logo footer" style="margin-top:2px;"/></a>
+			<span class="text" style="display:block; text-align:center; margin-top:-4px;">© 2015 - 2018</span>
+		</div>
+		<div id="right_column" class="text">
+			Made in <a href="https://en.wikipedia.org/wiki/Spain"><img src="images/spain.png" style="margin: 0 2px;" alt="Spain flag"/></a> with <i class="fa fa-heart" style="color:#cc0000"></i> by <a href="http://prlazarus.tk">prLázarus</a><br>
+			<i class="fa fa-plug"></i> <i>Site powered by <a href="http://rmarkdown.rstudio.com/index.html">R Markdown</a> and <a href="https://pages.github.com/">GitHub Pages</a></i><br>
+			<a href="mailto:info@projectcreationfx.tk">info@projectcreationfx.tk</a>
+		</div>
+	</div>
+</div>
+	
+			
+		</div>
+
+		<script>
+			// add bootstrap table styles to pandoc tables
+			function bootstrapStylePandocTables() {
+				$('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+			}
+
+			$(document).ready(function () {
+				bootstrapStylePandocTables();
+			});
+
+					</script>
+	
+	</body>
+</html>

@@ -11,7 +11,7 @@
 		
 	
 	
-	<title>Projects and games</title>
+	<title>Game State Manager</title>
 
 			<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -150,21 +150,22 @@
 
 	<script src="js/navbar.js"></script>
 </div>
-			<link rel="stylesheet" type="text/css" href="css/navbar_secondary.css"/>
+			<div class="no-decoration" style="padding-top:10px;">
+	<a href="md_wiki.html"><i class="fa fa-arrow-left"></i> Back to Project Creation FX Wiki index</a>
+</div>
+			<link rel="stylesheet" type="text/css" href="css/progressBar.css"/>
 
-<div class="navbar_secondary">
-	<div class="menu_secondary">
-		<a class="menuItem" href="md_downloads.html"><i class="fa fa-archive"></i> Latest release</a>
-		<a class="menuItem" href="md_release_notes.html"><i class="fa fa-newspaper-o"></i> Release notes</a>
-		<a class="menuItem" href="md_projects.html"><i class="fa fa-gamepad"></i> Projects and games</a>
-		<a class="menuItem" href="md_credits.html"><i class="fa fa-group"></i> Credits</a>
+<div class="progressBarContainer">
+	<div class="progressBar">
 	</div>
 </div>
+
+<script src="js/progressBar.js"></script>
 	
 			<div class="fluid-row" id="header">
 
 				
-						<h1 class="title toc-ignore">Projects and games</h1>
+						<h1 class="title toc-ignore">Game State Manager</h1>
 				<!--
 				-->
 				<!--
@@ -174,12 +175,13 @@
 	
 			</div>
 	
+			<div id="info" class="packageInfo">
+<b>Uses: </b> <a href="md_wiki_game_state.html">Game State</a><br>
+</div>
 	
 				
-	<div class="block info icon fa-info">
-	<b>This section has no content yet.</b> <br>
-	When it is ready, it will be published here.
-</div>
+	<p>Is a singleton class that controlls all <a href="md_wiki_game_state.html">game states</a>. This class stores all information about <a href="md_wiki_game_state.html">game states</a>, initializes them and changes between them.</p>
+<p>Due to its nature, it can be called from any place to execute some of its methods.</p>
 
 	
 			<link rel="stylesheet" type="text/css" href="css/footer.css"/>

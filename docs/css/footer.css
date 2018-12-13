@@ -5,17 +5,21 @@
 	right: 0px;
 
 	background-color: #003379;
-
 	border-top: solid 2px #e6e6e6;
 }
 
 .message {
 	text-align: left;
 	font-size: 10px;
+	float: left;
 }
 
 .message a {
 	text-decoration: none;
+}
+
+.message a:hover {
+	text-decoration: underline;
 }
 
 .footer .content {
@@ -24,35 +28,37 @@
 	margin-right: auto;
 
 	padding: 5px 15px;
-
 	text-align: right;
 }
 
-.footer #logo {
+.footer #logo_footer {
 	display: inline-block;
 	float: left;
 }
 
 
-.footer #logo img {
+.footer #logo_footer img {
 	height: 75px;
 }
 
-.footer #text {
+.footer #right_column {
 	display: inline-block;
-	padding-top: 35px;
+	padding-top: 37px;
+}
+
+.footer .text {
 	font-size: 12px;
 	color: #ffffff;
 }
 
 @media screen and (max-width: 500px) {
-	.footer #logo {
+	.footer #logo_footer {
 		float: none;
 		width: 100%;
 		text-align: center;
 	}
 
-	.footer #text {
+	.footer #right_column {
 		padding-top: 5px;
 	    width: 100%;
     	text-align: center;

@@ -52,6 +52,11 @@ body {
 	min-height: 100%;
 }
 
+pre {
+	line-height: 1.2 !important;
+	max-height: 300px;
+}
+
 code {
 	white-space: inherit !important;
 	font-family: consolas, monospace !important;
@@ -59,7 +64,7 @@ code {
 
 .main-container {
 	padding-top: 90px;
-	padding-bottom: 90px;
+	padding-bottom: 110px;
 
 	color: #151515;
 
@@ -69,7 +74,7 @@ code {
 
 @media screen and (max-width: 500px) {
 	.main-container {
-		padding-bottom: 135px;
+		padding-bottom: 170px;
 	}
 }
 
