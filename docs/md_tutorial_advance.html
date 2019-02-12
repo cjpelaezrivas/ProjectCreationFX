@@ -159,9 +159,11 @@
 		<a class="menuItem" href="md_wiki.html"><i class="fa fa-book"></i> Wiki</a>
 	</div>
 </div>
+
+<script src="js/navbar_secondary.js"></script>
 			<link rel="stylesheet" type="text/css" href="css/progressBar.css"/>
 
-<div class="progressBarContainer">
+<div id="progressBarContainer">
 	<div class="progressBar">
 	</div>
 </div>
@@ -182,19 +184,34 @@
 			</div>
 	
 	
-				
-	<div class="block info icon fa-info">
-	<b>This section has no content yet.</b> <br>
-	When it is ready, it will be published here.
+						<div id="TOC">
+									<span class="title">Table of content</span>
+								<ul>
+<li><a href="#hot-swapping-in-projeccreationfx-games">Hot swapping in ProjecCreationFX games</a></li>
+</ul>
+			</div>
+			
+	<p>This is an advanced tutorial to get a deeper knowledge of <a href="./">Project Creation FX</a>. Following the next steps you will be able to create more complex games and learn some useful techniques that will be useful during development.</p>
+<div id="hot-swapping-in-projeccreationfx-games" class="section level2">
+<h2>Hot swapping in ProjecCreationFX games</h2>
+<p>Sometimes, during a game development, it is necessary to change and test repeatedly a variable value, a character speed or an obstacle size, and the only thing you can do is close the game, open it again and check your changes. In some occasions, to test that change can take a lot of time, and it can be really annoying.</p>
+<p>A better solution for this problem is to do changes during your game execution and see the result in real time. This can be accomplish using <strong><a href="https://github.com/HotswapProjects/HotswapAgent">HotswapAgent</a></strong>. Its configuration is really simple: download the last compatible version, put the <code>JAR</code> file in a desired location, and configure the runtime environment to use it.</p>
+<p>You just need to add the following line in VM arguments to the JVM in Run Configurations:</p>
+<pre class="cmd"><code>-XXaltjvm=dcevm -javaagent:&quot;C:\...\hotswap-agent-X.X.X.jar&quot;=autoHotswap=true</code></pre>
+<p><div class="block warning icon fa-exclamation-triangle"> <strong>Remember:</strong> You have to use a JDK environment to make it work properly. </div></p>
+<div class="block note">
+	<i class="fa fa-spinner fa-pulse"></i>
+	More content in progress...
+</div>
 </div>
 
 	
 			<link rel="stylesheet" type="text/css" href="css/footer.css"/>
 
-<div class="message">
+<div id="footer_message">
 	Found an error or misspell? <a href="mailto:corrections@prlazarus.tk"> Email me to correct it</a>. Thank you.
 </div>
-<div class="footer">
+<div id="footer">
 	<div class="content">
 		<div id="logo_footer">
 			<a href="http://prlazarus.tk"><img src="images/logo_prlazarus.png" alt="prLázarus logo footer" style="margin-top:10px;"/></a>
@@ -202,7 +219,7 @@
 		</div>
 		<div id="right_column" class="text">
 			<br>
-			Made in <a href="https://en.wikipedia.org/wiki/Spain"><img src="images/spain.png" style="margin: 0 2px;" alt="Spain flag"/></a> with <i class="fa fa-heart" style="color:#cc0000"></i> by <a href="http://prlazarus.tk">prLázarus</a><br>
+			Made in <a href="https://en.wikipedia.org/wiki/Spain"><img src="images/spain.png" style="margin: -2px 2px 0 2px;" alt="Spain flag"/></a> with <i class="fa fa-heart" style="color:#cc0000"></i> by <a href="http://prlazarus.tk">prLázarus</a><br>
 			<i class="fa fa-plug"></i> <i>Site powered by <a href="http://rmarkdown.rstudio.com/index.html">R Markdown</a> and <a href="https://pages.github.com/">GitHub Pages</a></i><br>
 			<a href="mailto:info@projectcreationfx.tk">info@projectcreationfx.tk</a>
 		</div>

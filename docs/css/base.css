@@ -62,22 +62,6 @@ code {
 	font-family: consolas, monospace !important;
 }
 
-.main-container {
-	padding-top: 90px;
-	padding-bottom: 110px;
-
-	color: #151515;
-
-	text-align: justify;
-	font-size: 15px;
-}
-
-@media screen and (max-width: 500px) {
-	.main-container {
-		padding-bottom: 170px;
-	}
-}
-
 h1.title, .section h1,  .section h2, .section h3,
 .section h4,  .section h5, .section h6 {
 	text-align: left !important;

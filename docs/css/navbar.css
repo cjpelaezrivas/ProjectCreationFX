@@ -65,7 +65,7 @@
 	text-decoration: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1010px) {
 	#navbar #logo.showMenu img, #navbar.smaller #logo img, #navbar.alwaysSmaller #logo img {
 		height: 60px;
 	}

@@ -11,7 +11,7 @@
 		
 	
 	
-	<title>Main Manager Adapter</title>
+	<title>Project structure</title>
 
 			<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -153,19 +153,11 @@
 			<div class="no-decoration" style="padding-top:10px;">
 	<a href="md_wiki.html"><i class="fa fa-arrow-left"></i> Back to Project Creation FX Wiki index</a>
 </div>
-			<link rel="stylesheet" type="text/css" href="css/progressBar.css"/>
-
-<div id="progressBarContainer">
-	<div class="progressBar">
-	</div>
-</div>
-
-<script src="js/progressBar.js"></script>
 	
 			<div class="fluid-row" id="header">
 
 				
-						<h1 class="title toc-ignore">Main Manager Adapter</h1>
+						<h1 class="title toc-ignore">Project structure</h1>
 				<!--
 				-->
 				<!--
@@ -175,14 +167,30 @@
 	
 			</div>
 	
-			<div id="info" class="packageInfo">
-<b>Extends from: </b><a href="md_wiki_main_manager.html">Main Manager</a><br>
-</div>
 	
 				
-	<p>Implementation of <a href="md_wiki_main_manager.html"><code>MainManager</code></a> that includes all not required methods, except <code>statesCreation()</code> implementation. This is also an abstract class, but it could be useful to simplify the initialization of a project.</p>
-<p>All methods implementations in this class are empty. This class could be extended to have a cleaner code.</p>
-<p>In case that the game main class requires to implements all the methods from <a href="md_wiki_main_manager.html"><code>MainManager</code></a>, this class would not have any sense to be extended. In that case, the main class could extend from <a href="md_wiki_main_manager.html"><code>MainManager</code></a> directly.</p>
+	
+<link rel="stylesheet" type="text/css" href="css/imageviewer.css"/>
+<style>
+  .pannable-image {
+      width: 910px;
+  }
+  .iv-snap-image-wrap {
+  	width: 150px;
+  }
+</style>
+<script src="js/imageviewer.min.js"></script>
+
+<div id="image-gallery" style="float:left; margin-top:5px;">
+	<img src="images/wiki/structure_small.png" data-high-res-src="images/wiki/structure.png" alt="" class="pannable-image"/>
+</div>
+
+<script>
+   	$(function () {
+        $('.pannable-image').ImageViewer();
+    });
+</script>
+
 
 	
 			<link rel="stylesheet" type="text/css" href="css/footer.css"/>
