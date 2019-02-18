@@ -35,7 +35,7 @@
 	border-bottom: solid 5px #003379;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 750px) {
 	.navbar_secondary .menu_secondary {
 		padding-bottom:15px;
 	}
