@@ -5,8 +5,7 @@ $('.menu_secondary .menuItem').each(function(idx, itm) {
 	split = new URL(itm).pathname.split('/');
 	var page = split[split.length - 1]
 
-	console.log(current_page + " " + page)
 	if(page == current_page) {
-		$(itm).addClass("menuItem_selected");
+		$(itm).addClass("selected");
 	}
 });

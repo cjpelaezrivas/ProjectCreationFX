@@ -27,9 +27,8 @@
 
 .navbar_secondary .menu_secondary .menuItem:hover,
 .navbar_secondary .menu_secondary .menuItem:active,
-.navbar_secondary .menu_secondary .menuItem_selected {
+.navbar_secondary .menu_secondary .menuItem.selected {
 	background-color: #EFEFEF;
-	color: #151616;
 	text-decoration: none;
 
 	border-bottom: solid 5px #003379;
@@ -51,7 +50,7 @@
 
 	.navbar_secondary .menu_secondary .menuItem:hover,
 	.navbar_secondary .menu_secondary .menuItem:active,
-	.navbar_secondary .menu_secondary .menuItem_selected {
+	.navbar_secondary .menu_secondary .menuItem.selected {
 		border-bottom: solid 3px #003379;
 	}
 }

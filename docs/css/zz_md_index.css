@@ -1,0 +1,167 @@
+.caption_background {
+	background-color:#32323266;
+	border-radius:4px;
+}
+
+/* WHY */
+
+.why_list {
+	width: 100%;
+
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+
+.why_block {
+	overflow: hidden;
+	display: initial;
+}
+
+.why_cell {
+	float: left;
+	display: block;
+
+	width: 25%;
+
+	text-align: center;
+}
+
+.why_icon {
+	font-size: 30px;
+	color: #00307c;
+}
+
+.why_title {
+	padding-top: 5px;
+
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.why_separator {
+	padding: 0;
+	margin: 5px;
+}
+
+.why_description {
+	font-size: 14px;
+	color: #777777;
+}
+
+@media screen and (max-width: 650px) {
+	.why_block {
+		display: block;
+		margin-top: 10px;
+	}
+
+	.why_block:first-child {
+		margin-top: 0;
+	}
+
+	.why_cell {
+		width: 50%;
+	}
+}
+
+/* WHAT */
+
+.list-ok li:before {
+	content: "\f00c";
+	color: #00AA00;
+	font-size: 15px;
+}
+
+.list-nook li:before {
+	content: "\f00d";
+	color: #AA0000;
+	font-size: 15px;
+}
+
+
+/* FEATURES */
+
+.features_list {
+	width: 100%;
+}
+
+.features_block {
+	overflow: hidden;
+}
+
+.features_cell {
+	float: left;
+	display: flex;
+
+	width: 50%;
+
+	vertical-align: text-top;
+}
+
+.features_icon {
+	padding-left: 5px;
+
+	min-width: 50px;
+	font-size: 30px;
+	color: #00307c;
+}
+
+.features_content {
+	margin-top: 5px;
+	text-align: left;
+}
+
+.features_content ul {
+	margin-left: -5px;
+}
+
+@media screen and (max-width: 650px) {
+	.features_cell {
+		width: 100%;
+	}
+}
+
+/* SING UP*/
+
+#sigupContainer .field {
+	width: 100%;
+
+	margin-bottom: 7px;
+	padding: 5px;
+
+	border: 1px solid #c1c1c1;
+	border-radius:4px;
+}
+
+#sigupContainer .half {
+	width: 49%;
+}
+
+/*#sigupContainer #mc-embedded-subscribe {
+	margin-top: 5px;
+	padding: 7px 20px;
+
+	font-size: 17px;
+
+	border:1px solid #323232;
+	border-radius: 4px;
+	color:#ffffff !important;
+	background-color:#003379;
+
+	cursor: pointer;
+}*/
+
+#sigupContainer #mc-embedded-subscribe:hover {
+	border:1px solid #121212 !important;
+	color:#ffffff !important;
+	background-color:#323232 !important;
+}
+
+@media screen and (max-width: 650px) {
+	#sigupContainer .half {
+		width: 100%;
+	}
+
+	#sigupContainer #mc-embedded-subscribe {
+		width: 100%;
+	}
+}

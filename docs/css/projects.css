@@ -1,0 +1,148 @@
+.projectGrid .row,
+.projectPage .row {
+	margin: 0;
+}
+
+.projectGrid  .cell,
+.projectPage .cell {
+	padding: 0 0 15px 0 ;
+}
+
+.projectGrid .cell:nth-child(odd),
+.projectPage .cell:nth-child(odd) {
+	padding-right: 10px;
+}
+
+.projectGrid .cell:nth-child(even),
+.projectPage .cell:nth-child(even) {
+	padding-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+	.projectGrid .cell:nth-child(odd),
+	.projectGrid .cell:nth-child(even),
+	.projectPage .cell:nth-child(odd),
+	.projectPage .cell:nth-child(even)  {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+/**/
+
+.project {
+	padding: 10px;
+	border: 1px solid #dcdcc8;
+}
+
+.project .image {
+	margin: -11px;
+	height: 250px;
+
+	background-position: center center;
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+}
+
+.project .header {
+	margin: 22px 0 5px 0;
+}
+
+.project .header a.title {
+	display: block;
+    width: 100%;
+
+    color: #000000;
+    text-decoration: none;
+}
+
+.project .header a.title:hover,
+.project .header a.title:active {
+    color: #CC0000;
+    text-decoration: underline;
+}
+
+.project .header a.title h3 {
+    font-weight: bold;
+	font-size: 20px;
+}
+
+.project .header .price {
+	margin-left: 10px;
+}
+
+.project .header .platforms {
+    letter-spacing: 5px;
+}
+
+.project .tags {
+	margin-bottom: 5px;
+}
+
+/**/
+
+.projectPage .title {
+	font-weight: bold;
+}
+
+.projectPage #header {
+	margin-bottom: 20px;
+}
+
+.projectPage #downloads {
+	margin-bottom: 10px;
+}
+
+.projectPage #header .description {
+	margin-bottom: 10px;
+}
+
+.projectPage .price {
+	display: inline;
+}
+
+.projectPage .tags {
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+/**/
+
+.project .header .price,
+.projectPage .price {
+	padding: 3px 6px;
+
+    color: #e8e8e8;
+    background-color: #323232;
+    font-weight: bold;
+    text-align: center;
+
+    border-radius: 4px;
+}
+
+.project .header .price.free,
+.projectPage .price.free {
+	background-color: #e8e8e8;
+    color: #323232;
+}
+
+.project .header .platforms,
+.projectPage .platforms {
+	margin-left: 10px;
+
+	font-size: 15px;
+	color: #323232;
+}
+
+.project .tags .tag,
+.projectPage .tags .tag {
+	margin-right: 5px;
+	padding: 1px 4px;
+
+	color: #ffffff;
+	font-size: 12px;
+
+	background-color: #003379;
+	border: 1px solid #323232;
+	border-radius: 4px;
+}

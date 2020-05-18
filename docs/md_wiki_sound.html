@@ -1,139 +1,80 @@
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
 <head>
-
 	<meta charset="utf-8" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="generator" content="pandoc" />
 
-		
-	
-	
-	<title>Sound</title>
+	<title>Sound - Project Creation FX Wiki</title>
 
-			<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-			<meta charset="utf-8" />
-<meta http-equiv="content-type" content="text/html" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name='Language' content='en' />
+<meta name='Content-Language' content='en' />
+
 <meta name="author" content="Carlos J. Peláez Rivas" />
-<meta name="description" content="Project Creation FX game engine" />
-<meta name="keywords" content="engine, framework, game, games, videogames, 2d, java, javafx, coding, code, development, programming, carlos, jesús, jesus, peláez, pelaez, rivas, cjpelaez, cjpelaezrivas, lazarus, prlazarus, project, creation, fx, projectcreationfx, málaga, malaga, uma, españa, spain" />
+<meta name="description" content="Project Creation FX - Game engine" />
+<meta name="keywords" content="engine,framework,game,games,videogames,2d,java,javafx,coding,code,development,programming,carlos,jesús,jesus,peláez,pelaez,rivas,cjpelaez,cjpelaezrivas,lazarus,prlazarus,project,creation,fx,projectcreationfx,málaga,malaga,uma,españa,spain" />
+
+<meta property="og:site_name" content="Project Creation FX" />
+<meta property="og:title" content="Project Creation FX" />
+<meta property="og:description" content="Project Creation FX - Game engine" />
+<meta name="twitter:title" content="Project Creation FX">
+<meta name="twitter:description" content="Project Creation FX - Game engine" />
 
 <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
 <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
 
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
-<link rel="stylesheet" type="text/css" href="css/lightbox.min.css"/>
+<link rel="stylesheet" href="lib/bootstrap-4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="lib/fontawesome-5.8.1/css/all.min.css"/>
+<link rel="stylesheet" type="text/css" href="lib/lightbox-2.10/css/lightbox.min.css"/>
 
 <link rel="stylesheet" type="text/css" href="css/base.css"/>
 <link rel="stylesheet" type="text/css" href="css/main.css"/>
 <link rel="stylesheet" type="text/css" href="css/toc.css"/>
+<link rel="stylesheet" type="text/css" href="css/code.css"/>
 <link rel="stylesheet" type="text/css" href="css/print.css" media="print"/>
 
-<script src="js/scroll.js"></script>
-<script src="js/lightbox.min.js"></script> <!-- http://lokeshdhakar.com/projects/lightbox2/ -->
+<script src="lib/jquery-3.3.1/js/jquery.min.js"></script>
+<script src="lib/bootstrap-4.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="lib/stickytabs-1.2.0/js/stickytabs.js"></script>
+<script src="lib/scrolltotop-1.0/js/scrolltotop.js"></script>
+
+<script src="lib/lightbox-2.10/js/lightbox.min.js"></script>
 <script>
 	lightbox.option({
-	  'fadeDuration': 250,
-	  'resizeDuration': 250,
-	  'wrapAround': true
+		'fadeDuration': 250,
+		'resizeDuration': 250,
+		'wrapAround': true
 	})
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74491738-4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
 
-  gtag('config', 'UA-74491738-4');
+	gtag('config', 'UA-74491738-4');
 </script>
-	
-	
-	
-	
-			<style type="text/css">
-			h1 {
-				font-size: 34px;
-			}
-			h1.title {
-				font-size: 38px;
-			}
-			h2 {
-				font-size: 30px;
-			}
-			h3 {
-				font-size: 24px;
-			}
-			h4 {
-				font-size: 18px;
-			}
-			h5 {
-				font-size: 16px;
-			}
-			h6 {
-				font-size: 12px;
-			}
-			.table th:not([align]) {
-				text-align: left;
-			}
-					</style>
-	
-	
-</head>
+	</head>
 
 <body>
+	<div class="container-fluid main-container">
 
-			<style type = "text/css">
-			.main-container {
-				max-width: 940px;
-				margin-left: auto;
-				margin-right: auto;
-			}
-			code {
-				color: inherit;
-				background-color: rgba(0, 0, 0, 0.04);
-			}
-			img {
-				max-width:100%;
-				height: auto;
-			}
-			.tabbed-pane {
-				padding-top: 12px;
-			}
-			button.code-folding-btn:focus {
-				outline: none;
-			}
-		</style>
-
-		
-		<div class="container-fluid main-container">
-
-		<!-- tabsets -->
 		<script>
 			$(document).ready(function () {
 				window.buildTabsets("TOC");
 			});
 		</script>
 
-		<!-- code folding -->
-		
-			
-			<link rel="stylesheet" type="text/css" href="css/navbar.css"/>
+					<link rel="stylesheet" type="text/css" href="css/navbar.css"/>
 
 <div id="navbar" class="alwaysSmaller">
-	<div id="logo">
-		<a href="./"><img src="images/logo.png"/></a>
-	</div>
+	<a href="./">
+		<div id="logo"></div>
+	</a>
 
 	<div id="menu">
 		<div id="menuToggler">
@@ -142,7 +83,7 @@
 		<div id="menuItems">
 			<a class="menuItem" href="./"><i class="fa fa-home"></i> Home</a>
 			<a class="menuItem" href="md_downloads.html"><i class="fa fa-download"></i> Downloads</a>
-			<a class="menuItem" href="md_tutorial_basic.html"><i class="fa fa-life-ring"></i> Tutorials</a>
+			<a class="menuItem" href="md_tutorial_basic.html"><i class="far fa-life-ring"></i> Tutorials</a>
 			<a class="menuItem" href="md_wiki.html"><i class="fa fa-book"></i> Wiki</a>
 			<a class="menuItem" href="https://github.com/cjpelaezrivas/ProjectCreationFX/issues"><i class="fa fa-bug"></i> Issues and bugs</a>
 		</div>
@@ -150,10 +91,7 @@
 
 	<script src="js/navbar.js"></script>
 </div>
-			<div class="no-decoration" style="padding-top:10px;">
-	<a href="md_wiki.html"><i class="fa fa-arrow-left"></i> Back to Project Creation FX Wiki index</a>
-</div>
-			<link rel="stylesheet" type="text/css" href="css/progressBar.css"/>
+					<link rel="stylesheet" type="text/css" href="css/progressBar.css"/>
 
 <div id="progressBarContainer">
 	<div class="progressBar">
@@ -161,35 +99,32 @@
 </div>
 
 <script src="js/progressBar.js"></script>
-	
-			<div class="fluid-row" id="header">
+		
+		<div class="no-decoration" style="padding-top:10px;">
+			<a href="md_wiki.html"><i class="fa fa-arrow-left"></i> Back to Project Creation FX Wiki index</a>
+		</div>
 
-				
-						<h1 class="title toc-ignore">Sound</h1>
-				<!--
-				-->
-				<!--
-				-->
-				<!--
-				-->
-	
-			</div>
-	
-			<div id="info" class="packageInfo">
-<b>Is used in: </b><a href="md_wiki_sound_manager.html">Sound Manager</a><br><b>Uses: </b> <a href="md_wiki_sound_resource.html">Sound Resource</a><br>
+		<div class="fluid-row" id="header">
+
+			<h1 class="title toc-ignore ">Sound</h1>
+
+							<div id="info" class="block packageInfo">
+<b>Is used in: </b><a href="md_wiki_sound_manager.html">Sound Manager</a><br><b>Uses: </b><a href="md_wiki_sound_resource.html">Sound Resource</a>
 </div>
-	
-				
-	<div class="block info icon fa-info">
+			
+		</div>
+
+		
+		<div class="block info icon fa-info">
 	<b>This section has no content yet.</b> <br>
 	When it is ready, it will be published here.
 </div>
 
-	
-			<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+		
+					<link rel="stylesheet" type="text/css" href="css/footer.css"/>
 
 <div id="footer_message">
-	Found an error or misspell? <a href="mailto:corrections@prlazarus.tk"> Email me to correct it</a>. Thank you.
+	Found an error or misspell? <a href="mailto:corrections@prlazarus.tk"> Send an email</a> or <a href="https://github.com/cjpelaezrivas/ProjectCreationFX/issues">open a new issue</a> to correct it</a>. Thank you.
 </div>
 <div id="footer">
 	<div class="content">
@@ -199,27 +134,13 @@
 		</div>
 		<div id="right_column" class="text">
 			<br>
-			Made in <a href="https://en.wikipedia.org/wiki/Spain"><img src="images/spain.png" style="margin: -2px 2px 0 2px;" alt="Spain flag"/></a> with <i class="fa fa-heart" style="color:#cc0000"></i> by <a href="http://prlazarus.tk">prLázarus</a><br>
-			<i class="fa fa-plug"></i> <i>Site powered by <a href="http://rmarkdown.rstudio.com/index.html">R Markdown</a> and <a href="https://pages.github.com/">GitHub Pages</a></i><br>
+			Developed in <a href="https://en.wikipedia.org/wiki/Spain"><img src="images/spain.png" style="margin: -2px 2px 0 2px;" alt="Spain flag"/></a> with <i class="fa fa-heart" style="color:#cc0000"></i> by <i><a href="http://prlazarus.tk">prLázarus</a></i><br>
+			<i class="fa fa-plug"></i> Site powered by <i><a href="http://rmarkdown.rstudio.com/index.html">R Markdown</a></i> and <i><a href="https://pages.github.com/">GitHub Pages</a></i><br>
 			<a href="mailto:info@projectcreationfx.tk">info@projectcreationfx.tk</a>
 		</div>
 	</div>
 </div>
-	
-			
-		</div>
-
-		<script>
-			// add bootstrap table styles to pandoc tables
-			function bootstrapStylePandocTables() {
-				$('tr.header').parent('thead').parent('table').addClass('table table-condensed');
-			}
-
-			$(document).ready(function () {
-				bootstrapStylePandocTables();
-			});
-
-					</script>
-	
-	</body>
+		
+	</div>
+</body>
 </html>

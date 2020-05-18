@@ -1,20 +1,20 @@
 #progressBarContainer {
 	left:0;
 	width: 100%;
-	height: 5px;
+	height: 0.5em;
 	margin-bottom: 0px;
 	position: fixed;
 	top: 75px;
 	overflow: hidden;
 	background-color: transparent;
 	content: "";
-	z-index: 9999;
 }
 
 #progressBarContainer .progressBar {
 	width: 0%;
 	float: left;
 	height: 100%;
+	z-index: 9999;
 	max-width: 100%;
 	background-color: #003379;
 	-webkit-transition: width .6s ease;

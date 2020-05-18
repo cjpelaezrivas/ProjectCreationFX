@@ -1,0 +1,25 @@
+#wiki_logo {
+	float: initial;
+	display: inline-block;
+
+	height: 150px;
+	width: 100%;
+	max-width: 464px;
+
+	margin: 15px 0;
+
+	background-image: url("../images/wiki/logo_wiki.png");
+	background-position: center left;
+    background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#wiki_before_index .menuItem,
+#wiki_before_index .menuItem:visited {
+	border: dashed 2px #eaeaea;
+}
+
+#wiki_before_index .menuItem:hover,
+#wiki_before_index .menuItem:active {
+	border: solid 2px #003379;
+}

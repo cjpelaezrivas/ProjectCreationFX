@@ -33,11 +33,15 @@
 	text-align: right;
 }
 
+#footer .content a, .footer .content a:hover  {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
 #footer #logo_footer {
 	display: inline-block;
 	float: left;
 }
-
 
 #footer #logo_footer img {
 	height: 75px;
@@ -67,7 +71,3 @@
 	}
 }
 
-#footer .content a, .footer .content a:hover  {
-	color: #ffffff;
-	text-decoration: underline;
-}
