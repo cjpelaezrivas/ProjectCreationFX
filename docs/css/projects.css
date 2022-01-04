@@ -85,6 +85,10 @@
 	font-weight: bold;
 }
 
+.projectPage .section {
+	margin: 15px 0;
+}
+
 .projectPage #header {
 	margin-bottom: 20px;
 }

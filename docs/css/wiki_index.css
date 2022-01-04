@@ -1,9 +1,0 @@
-#wiki_before_index .menuItem,
-#wiki_before_index .menuItem:visited {
-	border: dashed 2px #eaeaea;
-}
-
-#wiki_before_index .menuItem:hover,
-#wiki_before_index .menuItem:active {
-	border: solid 2px #003379;
-}
