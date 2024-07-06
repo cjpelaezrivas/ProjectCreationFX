@@ -1,270 +1,221 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Run for your life&nbsp;- Project Creation FX</title>
+    <meta name='Language' content='en' />
+    <meta name='Content-Language' content='en' />
+    <meta name="author" content="Carlos J. Peláez Rivas" />
+    <meta name="description" content="Project Creation FX - Game engine" />
+    <meta name="keywords" content="engine,framework,game,videogames,2d,java,javafx,coding,code,development,carlos,pelaez,cjpelaez,lazarus,prlazarus,project,creation,fx,projectcreationfx,malaga,spain" />
+    <meta property="og:site_name" content="Project Creation FX" />
+    <meta property="og:title" content="Project Creation FX" />
+    <meta property="og:description" content="Project Creation FX - Game engine" />
+    <meta name="twitter:title" content="Project Creation FX">
+    <meta name="twitter:description" content="Project Creation FX - Game engine" />
+    <link rel="icon" type="image/x-icon" href="media/images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="media/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="static/lib/bootstrap-4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/lib/fontawesome-5.8.1/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/lib/lightbox-2.10/css/lightbox.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/toc.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/code.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/print.css" media="print" />
+    <script src="static/lib/jquery-3.3.1/js/jquery.min.js"></script>
+    <script src="static/lib/bootstrap-4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="static/lib/scrolltotop-1.0/js/scrolltotop.js"></script>
+    <script src="static/lib/lightbox-2.10/js/lightbox.min.js"></script>
+    <script>
+      lightbox.option({
+        'fadeDuration': 250,
+        'resizeDuration': 250,
+        'wrapAround': true
+      })
+    </script>
 
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="generator" content="pandoc" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QF45861G3V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-QF45861G3V');
+    </script>
+    <link rel="stylesheet" type="text/css" href="static/css/projects.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/image_gallery.css" />
+  </head>
+  <body>
+    <div class="container-fluid main-container">
+      <link rel="stylesheet" type="text/css" href="static/css/navbar.css" />
+      <div id="navbar" class="alwaysSmaller">
+        <a href="./">
+          <div id="logo"></div>
+        </a>
+        <div id="menu">
+          <div id="menuToggler">
+            <i class="fa fa-bars"></i>
+          </div>
+          <div id="menuItems">
+            <a class="menuItem" href="./"><i class="fa fa-home"></i> Home</a>
+            <a class="menuItem" href="md_projects.html"><i class="fa fa-gamepad"></i> Projects and games</a>
+            <a class="menuItem" href="md_credits.html"><i class="fa fa-users"></i> Credits</a>
+            <a class="menuItem" href="md_license.html"><i class="fa fa-balance-scale"></i> License</a>
+          </div>
+        </div>
+        <script src="static/js/navbar.js"></script>
+      </div>
+      <div class="no-decoration" style="padding-top:10px;">
+        <a href="md_projects.html"><i class="fa fa-arrow-left"></i> Back to Project Creation FX projects</a>
+      </div>
+      <div class="projectPage">
+        <h1 class="title toc-ignore ">Run for your life</h1>
+        <div id="header" class="row section level2">
+          <div id="information" class="cell col-md-6 col-sm-12">
+            <div>
+              <span class="price free">Free</span>
+              <span class="platforms">
+                            <i class="fab fa-windows"></i>
+                            <i class="fab fa-apple"></i>
+                            <i class="fab fa-linux"></i>
+                        </span>
+            </div>
+            <div class="tags">
+              <span class="tag">Arcade</span>
+              <span class="tag">Endless</span>
+              <span class="tag">Infinite runner</span>
+              <span class="tag">Platformer</span>
+              <span class="tag">Side scrolling</span>
+            </div>
+            <h4>Description</h4>
+            <div class="description">
+              Stay in movement to maintain your health filled and avoid the gaps. Collect coins to gain points and reach the top of the global scoreboard.
+            </div>
+          </div>
+          <div id="mainImage" class="cell col-md-6 col-sm-12">
+            <a href="media/images/projects/runforyourlife/cover.png" data-lightbox="image-gallery-1" data-title="">
+              <img src="media/images/projects/runforyourlife/cover.png">
+            </a>
+          </div>
+        </div>
+        <div id="downloads" class="section level2">
+          <center>
+            <a class="buttonA itchio" href="http&#58;//cjpelaez.itch.io/run-for-your-life"><i class="fab fa-itch-io"></i> Download from Itch.io</a>
+          </center>
+        </div>
+        <div id="screenshots" class="section level2">
+          <h2>Screenshots</h2>
+          <span style="color:#777777"><i class="fa fa-search"></i> <i>Click on the images to see them in gallery mode.</i></span>
+          <div class="image_gallery">
+            <a href="media/images/projects/runforyourlife/img1.png" data-lightbox="image-gallery-1" data-title="">
+              <img class="image_gallery_size4" src="media/images/projects/runforyourlife/img1.png">
+            </a>
+            <a href="media/images/projects/runforyourlife/img2.png" data-lightbox="image-gallery-1" data-title="">
+              <img class="image_gallery_size4" src="media/images/projects/runforyourlife/img2.png">
+            </a>
+            <a href="media/images/projects/runforyourlife/img3.png" data-lightbox="image-gallery-1" data-title="">
+              <img class="image_gallery_size4" src="media/images/projects/runforyourlife/img3.png">
+            </a>
+            <a href="media/images/projects/runforyourlife/img4.png" data-lightbox="image-gallery-1" data-title="">
+              <img class="image_gallery_size4" src="media/images/projects/runforyourlife/img4.png">
+            </a>
+            <a href="media/images/projects/runforyourlife/img5.png" data-lightbox="image-gallery-1" data-title="">
+              <img class="image_gallery_size4" src="media/images/projects/runforyourlife/img5.png">
+            </a>
+            <a href="media/images/projects/runforyourlife/img6.gif" data-lightbox="image-gallery-1" data-title="">
+              <img class="image_gallery_size4" src="media/images/projects/runforyourlife/img6.gif">
+            </a>
+          </div>
+        </div>
+        <h2 id="top-scores">Top scores</h2>
+        <p>List with the top 10 plays ever made in <em>Run for your life</em>. <br>
+          <em>It may take some minutes to show the updates</em>.
+        </p>
 
-	<title>Run for your life - Project Creation FX</title>
+        <!--html_preserve-->
+        <table id="scoreBoard" class="table table-sm table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Level</th>
+              <th scope="col">Score</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody id="scoreBoardBody">
+          </tbody>
+        </table> <!--/html_preserve-->
+        <script async>
+          const options = {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hourCycle: 'h24'
+          };
+          $.getJSON('https://gist.githubusercontent.com/cjpelaezrivas/2898aa38a717adb2920487221d4219e5/raw/RfyL_topScores.json', data => {
+            const scores = data.scores;
+            const tableBody = $('#scoreBoardBody');
+            for (let i = 0; i < scores.length; i++) {
+              const tr = document.createElement('tr');
+              const th0 = document.createElement('th');
+              const td1 = document.createElement('td');
+              const td2 = document.createElement('td');
+              const td3 = document.createElement('td');
+              const td4 = document.createElement('td');
+              const text0 = document.createTextNode(i + 1);
+              const text1 = document.createTextNode(scores[i].name);
+              const text2 = document.createTextNode(scores[i].level);
+              const text3 = document.createTextNode(scores[i].score);
+              const date = new Date(scores[i].date);
+              const text4 = document.createTextNode(date.toLocaleString('es-ES', options));
+              th0.appendChild(text0);
+              td1.appendChild(text1);
+              td2.appendChild(text2);
+              td3.appendChild(text3);
+              td4.appendChild(text4);
+              tr.appendChild(th0);
+              tr.appendChild(td1);
+              tr.appendChild(td2);
+              tr.appendChild(td3);
+              tr.appendChild(td4);
+              tableBody.append(tr);
+            }
+          });
+        </script>
 
-			<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
-			<meta name='Language' content='en' />
-   <meta name='Content-Language' content='en' />
-
-   <meta name="author" content="Carlos J. Peláez Rivas" />
-   <meta name="description" content="Project Creation FX - Game engine" />
-   <meta name="keywords" content="engine,framework,game,games,videogames,2d,java,javafx,coding,code,development,programming,carlos,jesús,jesus,peláez,pelaez,rivas,cjpelaez,cjpelaezrivas,lazarus,prlazarus,project,creation,fx,projectcreationfx,málaga,malaga,uma,españa,spain" />
-
-   <meta property="og:site_name" content="Project Creation FX" />
-   <meta property="og:title" content="Project Creation FX" />
-   <meta property="og:description" content="Project Creation FX - Game engine" />
-   <meta name="twitter:title" content="Project Creation FX">
-   <meta name="twitter:description" content="Project Creation FX - Game engine" />
-
-   <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
-   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
-
-   <link rel="stylesheet" type="text/css" href="site_libs/bootstrap-4.1.3/css/bootstrap.min.css">
-   <link rel="stylesheet" type="text/css" href="site_libs/fontawesome-5.8.1/css/all.min.css"/>
-   <link rel="stylesheet" type="text/css" href="site_libs/lightbox-2.10/css/lightbox.min.css"/>
-
-   <link rel="stylesheet" type="text/css" href="css/base.css"/>
-   <link rel="stylesheet" type="text/css" href="css/main.css"/>
-   <link rel="stylesheet" type="text/css" href="css/toc.css"/>
-   <link rel="stylesheet" type="text/css" href="css/code.css"/>
-   <link rel="stylesheet" type="text/css" href="css/print.css" media="print"/>
-
-   <script src="site_libs/jquery-3.3.1/js/jquery.min.js"></script>
-   <script src="site_libs/bootstrap-4.1.3/js/bootstrap.bundle.min.js"></script>
-   <script src="site_libs/scrolltotop-1.0/js/scrolltotop.js"></script>
-
-   <script src="site_libs/lightbox-2.10/js/lightbox.min.js"></script>
-   <script>
-   	lightbox.option({
-   		'fadeDuration': 250,
-   		'resizeDuration': 250,
-   		'wrapAround': true
-   	})
-   </script>
-
-   <!-- Global site tag (gtag.js) - Google Analytics -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74491738-4"></script>
-   <script>
-   	window.dataLayer = window.dataLayer || [];
-   	function gtag(){dataLayer.push(arguments);}
-   	gtag('js', new Date());
-
-   	gtag('config', 'UA-74491738-4');
-   </script>
-	
-	<link rel="stylesheet" type="text/css" href="css/projects.css"/>
-	<link rel="stylesheet" type="text/css" href="css/image_gallery.css"/>
-</head>
-
-<body>
-	<div class="container-fluid main-container">
-
-		<script>
-			$(document).ready(function () {
-				window.buildTabsets("TOC");
-			});
-		</script>
-
-					<link rel="stylesheet" type="text/css" href="css/navbar.css"/>
-
-     <div id="navbar" class="alwaysSmaller">
-     	<a href="./">
-     		<div id="logo"></div>
-     	</a>
-
-     	<div id="menu">
-     		<div id="menuToggler">
-     			<i class="fa fa-bars"></i>
-     		</div>
-     		<div id="menuItems">
-     			<a class="menuItem" href="./"><i class="fa fa-home"></i> Home</a>
-     			<a class="menuItem" href="md_projects.html"><i class="fa fa-gamepad"></i> Projects and games</a>
-     		<a class="menuItem" href="md_credits.html"><i class="fa fa-users"></i> Credits</a>
-     		<a class="menuItem" href="md_license.html"><i class="fa fa-balance-scale"></i> License</a>
-     		</div>
-     	</div>
-
-     	<script src="js/navbar.js"></script>
-     </div>
-		
-		<div class="no-decoration" style="padding-top:10px;">
-			<a href="md_projects.html"><i class="fa fa-arrow-left"></i> Back to Project Creation FX projects</a>
-		</div>
-
-		<div class="projectPage">
-
-			<h1 class="title toc-ignore ">Run for your life</h1>
-
-			
-			<div id="header" class="row section level2">
-				<div id="information" class="cell col-md-6 col-sm-12">
-					<!--
-					<h2>Information</h2>
-					-->
-
-					<div>
-													<span class="price free">Free</span>
-						
-						<span class="platforms">
-							<i class="fab fa-windows"></i>
-							<i class="fab fa-apple"></i>
-							<i class="fab fa-linux"></i>
-						</span>
-					</div>
-
-											<div class="tags">
-															<span class="tag">Arcade</span>
-															<span class="tag">Endless</span>
-															<span class="tag">Infinite runner</span>
-															<span class="tag">Platformer</span>
-															<span class="tag">Side scrolling</span>
-													</div>
-					
-											<h4>Description</h4>
-						<div class="description">
-							Stay in movement to maintain your health filled and avoid the gaps. Collect coins to gain points and reach the top of the global scoreboard.
-						</div>
-									</div>
-
-				<div id="mainImage" class="cell col-md-6 col-sm-12">
-					<a href="images/projects/runforyourlife/cover.png" data-lightbox="image-gallery-1" data-title="">
-						<img src="images/projects/runforyourlife/cover.png">
-					</a>
-				</div>
-			</div>
-
-			
-			<div id="downloads" class="section level2">
-				<center>
-																<a class="buttonA itchio" href="http://cjpelaez.itch.io/run-for-your-life"><i class="fab fa-itch-io"></i> Download from Itch.io</a>
-									</center>
-			</div>
-
-			
-			<div id="screenshots" class="section level2">
-				<h2>Screenshoots</h2>
-
-				<span style="color:#777777"><i class="fa fa-search"></i> <i>Click on the images to see them in gallery mode.</i></span>
-
-				<div class="image_gallery">
-											<a href="images/projects/runforyourlife/img1.png" data-lightbox="image-gallery-1" data-title="">
-							<img class="image_gallery_size4" src="images/projects/runforyourlife/img1.png">
-						</a>
-											<a href="images/projects/runforyourlife/img2.png" data-lightbox="image-gallery-1" data-title="">
-							<img class="image_gallery_size4" src="images/projects/runforyourlife/img2.png">
-						</a>
-											<a href="images/projects/runforyourlife/img3.png" data-lightbox="image-gallery-1" data-title="">
-							<img class="image_gallery_size4" src="images/projects/runforyourlife/img3.png">
-						</a>
-											<a href="images/projects/runforyourlife/img4.png" data-lightbox="image-gallery-1" data-title="">
-							<img class="image_gallery_size4" src="images/projects/runforyourlife/img4.png">
-						</a>
-											<a href="images/projects/runforyourlife/img5.png" data-lightbox="image-gallery-1" data-title="">
-							<img class="image_gallery_size4" src="images/projects/runforyourlife/img5.png">
-						</a>
-											<a href="images/projects/runforyourlife/img6.gif" data-lightbox="image-gallery-1" data-title="">
-							<img class="image_gallery_size4" src="images/projects/runforyourlife/img6.gif">
-						</a>
-									</div>
-
-			<div id="top-scores" class="section level2">
-   <h2>Top scores</h2>
-   <p>List with the top 10 plays ever made in <em>Run for your life</em>. <br> <em>It may take some minutes to show the updates</em>.</p>
-   
-<table id="scoreBoard" class="table table-sm table-hover">
-	<thead>
-		<tr>
-			<th scope="col">#</th>
-			<th scope="col">Name</th>
-			<th scope="col">Level</th>
-			<th scope="col">Score</th>
-			<th scope="col">Date</th>
-		</tr>
-	</thead>
-	<tbody id="scoreBoardBody">
-	</tbody>
-</table>
-
-   <script async>
-       const options = { year: 'numeric', month: '2-digit', day: '2-digit',
-           hour: '2-digit', minute: '2-digit', second: '2-digit',
-           hourCycle: 'h24' };
-
-       $.getJSON('https://gist.githubusercontent.com/cjpelaezrivas/2898aa38a717adb2920487221d4219e5/raw/RfyL_topScores.json', data => {
-           const scores = data.scores;
-           const tableBody = $('#scoreBoardBody');
-
-           for(let i = 0; i < scores.length; i++) {
-               const tr = document.createElement('tr');
-
-               const th0 = document.createElement('th');
-               const td1 = document.createElement('td');
-               const td2 = document.createElement('td');
-               const td3 = document.createElement('td');
-               const td4 = document.createElement('td');
-
-               const text0 = document.createTextNode(i + 1);
-               const text1 = document.createTextNode(scores[i].name);
-               const text2 = document.createTextNode(scores[i].level);
-               const text3 = document.createTextNode(scores[i].score);
-
-               const date = new Date(scores[i].date);
-               const text4 = document.createTextNode(date.toLocaleString('es-ES', options));
-
-               th0.appendChild(text0);
-               td1.appendChild(text1);
-               td2.appendChild(text2);
-               td3.appendChild(text3);
-               td4.appendChild(text4);
-
-               tr.appendChild(th0);
-               tr.appendChild(td1);
-               tr.appendChild(td2);
-               tr.appendChild(td3);
-               tr.appendChild(td4);
-
-               tableBody.append(tr);
-           }
-       });
-   </script>
-   
-<noscript>
-	<div class="block warning icon fa-exclamation" style="margin-bottom:20px;">
-		The scoreboard is not available if JavaScript is disabled.
-	</div>
-</noscript>
-
-   </div>
-
-					</div>
-
-					<link rel="stylesheet" type="text/css" href="css/footer.css"/>
-
-     <div id="footer_message">
-     	Found an error or misspell? <a href="mailto:prlazarus.info@gmail.com"> Send me an email</a> to correct it</a>. Thank you.
-     </div>
-     <div id="footer">
-     	<div class="content">
-     		<div id="logo_footer">
-     			<a href="https://prlazarus.tk"><img src="images/logo_prlazarus.png" alt="prLázarus logo footer" style="margin-top:10px;"/></a>
-     			<!-- <span class="text" style="display:block; text-align:center; margin-top:-4px;">© 2015 - 2018</span> -->
-     		</div>
-     		<div id="right_column" class="text">
-     			<br>
-     			Developed in <a href="https://en.wikipedia.org/wiki/Spain"><img src="images/spain.png" style="margin: -2px 2px 0 2px;" alt="Spain flag"/></a> with <i class="fa fa-heart" style="color:#cc0000"></i> by <i><a href="http://prlazarus.tk">prLázarus</a></i><br>
-     			<i class="fa fa-plug"></i> Site powered by <i><a href="http://rmarkdown.rstudio.com/index.html">R Markdown</a></i> and <i><a href="https://pages.github.com/">GitHub Pages</a></i><br>
-     			<a href="mailto:prlazarus.info@gmail.com">prlazarus.info@gmail.com</a>
-     		</div>
-     	</div>
-     </div>
-		
-	</div>
-</body>
+        <!--html_preserve-->
+        <noscript>
+          <div class="block warning icon fa-exclamation" style="margin-bottom:20px;">
+            The scoreboard is not available if JavaScript is disabled.
+          </div>
+        </noscript> <!--/html_preserve-->
+      </div>
+      <link rel="stylesheet" type="text/css" href="static/css/footer.css" />
+      <div id="footer_message">
+        Found an error or misspell? <a href="mailto:prlazarus.info@gmail.com"> Send me an email</a> to correct it</a>. Thank you.
+      </div>
+      <div id="footer">
+        <div class="content">
+          <div id="logo_footer">
+            <a href="https://prlazarus.es"><img src="media/images/logo_prlazarus.png" alt="prLázarus logo footer" style="margin-top:10px;" /></a>
+          </div>
+          <div id="right_column" class="text">
+            <br>
+            Developed in <a href="https://en.wikipedia.org/wiki/Spain"><img src="media/images/spain.png" style="margin: -2px 2px 0 2px;" alt="Spain flag" /></a> with <i class="fa fa-heart" style="color:#cc0000"></i> by <i><a href="https://prlazarus.es">prLázarus</a></i><br>
+            <i class="fa fa-plug"></i> Site powered by <i><a href="https://cjpelaezrivas.dev/Lighthouse/">Lighthouse</a></i> and <i><a href="https://pages.github.com/">GitHub Pages</a></i><br>
+            <a href="mailto:prlazarus.info@gmail.com">prlazarus.info@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,327 +1,293 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Creation FX&nbsp;- Project Creation FX</title>
+    <meta name='Language' content='en' />
+    <meta name='Content-Language' content='en' />
+    <meta name="author" content="Carlos J. Peláez Rivas" />
+    <meta name="description" content="Project Creation FX - Game engine" />
+    <meta name="keywords" content="engine,framework,game,videogames,2d,java,javafx,coding,code,development,carlos,pelaez,cjpelaez,lazarus,prlazarus,project,creation,fx,projectcreationfx,malaga,spain" />
+    <meta property="og:site_name" content="Project Creation FX" />
+    <meta property="og:title" content="Project Creation FX" />
+    <meta property="og:description" content="Project Creation FX - Game engine" />
+    <meta name="twitter:title" content="Project Creation FX">
+    <meta name="twitter:description" content="Project Creation FX - Game engine" />
+    <link rel="icon" type="image/x-icon" href="media/images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="media/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="static/lib/bootstrap-4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/lib/fontawesome-5.8.1/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/lib/lightbox-2.10/css/lightbox.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/toc.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/code.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/print.css" media="print" />
+    <script src="static/lib/jquery-3.3.1/js/jquery.min.js"></script>
+    <script src="static/lib/bootstrap-4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="static/lib/scrolltotop-1.0/js/scrolltotop.js"></script>
+    <script src="static/lib/lightbox-2.10/js/lightbox.min.js"></script>
+    <script>
+      lightbox.option({
+        'fadeDuration': 250,
+        'resizeDuration': 250,
+        'wrapAround': true
+      })
+    </script>
 
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="generator" content="pandoc" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QF45861G3V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-QF45861G3V');
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid main-container">
+      <link rel="stylesheet" type="text/css" href="static/css/navbar.css" />
+      <div id="navbar" class="alwaysSmaller">
+        <a href="./">
+          <div id="logo"></div>
+        </a>
+        <div id="menu">
+          <div id="menuToggler">
+            <i class="fa fa-bars"></i>
+          </div>
+          <div id="menuItems">
+            <a class="menuItem" href="./"><i class="fa fa-home"></i> Home</a>
+            <a class="menuItem" href="md_projects.html"><i class="fa fa-gamepad"></i> Projects and games</a>
+            <a class="menuItem" href="md_credits.html"><i class="fa fa-users"></i> Credits</a>
+            <a class="menuItem" href="md_license.html"><i class="fa fa-balance-scale"></i> License</a>
+          </div>
+        </div>
+        <script src="static/js/navbar.js"></script>
+      </div>
+      <div class="fluid-row" id="header">
+      </div>
+      <script>
+        var navbar = document.querySelector('#navbar');
+        navbar.classList.remove("alwaysSmaller");
+        var mainContainer = document.querySelector('.main-container');
+        mainContainer.style.paddingTop = "180px";
+      </script>
 
-	<title>Project Creation FX</title>
+      <!--html_preserve-->
+      <link rel="stylesheet" type="text/css" href="static/css/zz_md_index.css" />
+      <link rel="stylesheet" type="text/css" href="static/css/image_gallery.css" />
+      <div id="imagesCarousel" class="carousel slide" data-ride="carousel" data-interval="15000" style="width:100%;">
+        <ol class="carousel-indicators">
+          <li data-target="#imagesCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#imagesCarousel" data-slide-to="1"></li>
+          <li data-target="#imagesCarousel" data-slide-to="2"></li>
+          <li data-target="#imagesCarousel" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="media/images/index/carousel/image1.jpg" alt=""></img>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="media/images/index/carousel/image2.jpg" alt=""></img>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="media/images/index/carousel/image3.jpg" alt=""></img>
+          </div>
+          <div class="carousel-item">
+            <a href="md_wiki_procedural_music_generator.html">
+              <img class="d-block w-100" src="media/images/index/carousel/image4.jpg" alt="Procedural Music Generator"></img>
+            </a>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#imagesCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#imagesCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div> <!--/html_preserve-->
+      <h2 id="what-is-project-creation-fx"><strong>What is Project Creation FX</strong></h2>
+      <p>Project Creation FX is a Java 2D game development engine based on JavaFX technology. This tool can be used as is, without other dependencies, just add it to a Java project and start coding.</p>
+      <p>The main aim of this project is to work as a common foundation for any game. This gives a lot of advantages and makes code easier to understand. In addition, games can be coded in Java and be run on any desktop system.</p>
+      <p>This framework has been created with the idea of use 2D graphics, thus 3D graphics are not a future plan.</p>
+      <h2 id="what-project-creation-fx-can-do"><strong>What Project Creation FX can do</strong></h2>
+      <p>This is the list of main features that are already included in Project Creation FX.</p>
 
-			<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
-			<meta name='Language' content='en' />
-   <meta name='Content-Language' content='en' />
+      <!--html_preserve-->
+      <div class="list-custom">
+        <div class="features_list">
+          <div class="features_block">
+            <div class="features_cell">
+              <i class="fa fa-cogs features_icon"></i>
+              <div class="features_content"> <!--/html_preserve-->
+                <p><strong>Gameplay utilities</strong></p>
+                <ul>
+                  <li>Multiple game states</li>
+                  <li>Entity creation using components and modules</li>
+                  <li>2D collisions detection</li>
+                  <li>Background compositions and parallax</li>
+                  <li>Dynamic 2D real time lighting system</li>
+                  <li>Customizable particle systems and animations</li>
+                  <li>AI based on state machines and steering behaviours</li>
+                </ul>
 
-   <meta name="author" content="Carlos J. Peláez Rivas" />
-   <meta name="description" content="Project Creation FX - Game engine" />
-   <meta name="keywords" content="engine,framework,game,games,videogames,2d,java,javafx,coding,code,development,programming,carlos,jesús,jesus,peláez,pelaez,rivas,cjpelaez,cjpelaezrivas,lazarus,prlazarus,project,creation,fx,projectcreationfx,málaga,malaga,uma,españa,spain" />
+                <!--html_preserve-->
+                <p>
+              </div>
+            </div>
+            <div class="features_cell">
+              <i class="fa fa-desktop  features_icon"></i>
+              <div class="features_content"> <!--/html_preserve--></p>
+                <p><strong>User interface</strong></p>
+                <ul>
+                  <li>Customizable keyboard and mouse control</li>
+                  <li>UI components and layouts</li>
+                  <li>JavaFX <code>fxml</code> files support</li>
+                  <li>Custom CSS classes and stylesheets</li>
+                  <li>Loading screens</li>
+                </ul>
 
-   <meta property="og:site_name" content="Project Creation FX" />
-   <meta property="og:title" content="Project Creation FX" />
-   <meta property="og:description" content="Project Creation FX - Game engine" />
-   <meta name="twitter:title" content="Project Creation FX">
-   <meta name="twitter:description" content="Project Creation FX - Game engine" />
+                <!--html_preserve-->
+                <p>
+              </div>
+            </div>
+          </div>
+          <div class="features_block">
+            <div class="features_cell">
+              <i class="fa fa-puzzle-piece features_icon"></i>
+              <div class="features_content">
+                </p> <!--/html_preserve-->
+                <p><strong>Modules</strong></p>
+                <ul>
+                  <li>Logging system with exceptions and errors handlers</li>
+                  <li>Internationalization and localization utilities</li>
+                  <li>Message passing interface</li>
+                </ul>
 
-   <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
-   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+                <!--html_preserve-->
+                <p>
+              </div>
+            </div>
+            <div class="features_cell">
+              <i class="fa fa-music features_icon"></i>
+              <div class="features_content">
+                </p> <!--/html_preserve-->
+                <p><strong>Sound</strong></p>
+                <ul>
+                  <li>Custom sound manager (<code>wav</code> and <code>ogg</code>)</li>
+                  <li>Global and 2D point sounds</li>
+                  <li>Procedural music generation system</li>
+                </ul>
 
-   <link rel="stylesheet" type="text/css" href="site_libs/bootstrap-4.1.3/css/bootstrap.min.css">
-   <link rel="stylesheet" type="text/css" href="site_libs/fontawesome-5.8.1/css/all.min.css"/>
-   <link rel="stylesheet" type="text/css" href="site_libs/lightbox-2.10/css/lightbox.min.css"/>
+                <!--html_preserve-->
+                <p>
+              </div>
+            </div>
+          </div>
+          <div class="features_block">
+            <div class="features_cell">
+              <i class="fa fa-code features_icon"></i>
+              <div class="features_content">
+                </p> <!--/html_preserve-->
+                <p><strong>Scripts</strong></p>
+                <ul>
+                  <li>Write scripting files using JavaScript</li>
+                  <li>Create custom cut scenes, IA behaviors or a modding API for your game</li>
+                </ul>
 
-   <link rel="stylesheet" type="text/css" href="css/base.css"/>
-   <link rel="stylesheet" type="text/css" href="css/main.css"/>
-   <link rel="stylesheet" type="text/css" href="css/toc.css"/>
-   <link rel="stylesheet" type="text/css" href="css/code.css"/>
-   <link rel="stylesheet" type="text/css" href="css/print.css" media="print"/>
+                <!--html_preserve-->
+                <p>
+              </div>
+            </div>
+            <div class="features_cell">
+              <i class="far fa-object-group features_icon"></i>
+              <div class="features_content">
+                </p> <!--/html_preserve-->
+                <p><strong>Integrations</strong></p>
+                <ul>
+                  <li><a href="http://www.mapeditor.org/">Tiled</a> map editor support</li>
+                  <li><a href="https://help.github.com/articles/about-gists/">GitHub Gist</a> read and write support</li>
+                  <li><code>xml</code>, <code>json</code> and <code>ini</code> files support</li>
+                </ul>
 
-   <script src="site_libs/jquery-3.3.1/js/jquery.min.js"></script>
-   <script src="site_libs/bootstrap-4.1.3/js/bootstrap.bundle.min.js"></script>
-   <script src="site_libs/scrolltotop-1.0/js/scrolltotop.js"></script>
+                <!--html_preserve-->
+                <p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </p>
+      </div> <!--/html_preserve-->
+      <h2 id="how-games-done-with-project-creation-fx-look-like"><strong>How games done with Project Creation FX look like</strong></h2>
+      <p><span style="color:#777777"><i class="fa fa-magic"></i> <em>Click on the images to see them in movement.</em></span></p>
 
-   <script src="site_libs/lightbox-2.10/js/lightbox.min.js"></script>
-   <script>
-   	lightbox.option({
-   		'fadeDuration': 250,
-   		'resizeDuration': 250,
-   		'wrapAround': true
-   	})
-   </script>
-
-   <!-- Global site tag (gtag.js) - Google Analytics -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74491738-4"></script>
-   <script>
-   	window.dataLayer = window.dataLayer || [];
-   	function gtag(){dataLayer.push(arguments);}
-   	gtag('js', new Date());
-
-   	gtag('config', 'UA-74491738-4');
-   </script>
-	</head>
-
-<body>
-	<div class="container-fluid main-container">
-
-		<script>
-			$(document).ready(function () {
-				window.buildTabsets("TOC");
-			});
-		</script>
-
-					<link rel="stylesheet" type="text/css" href="css/navbar.css"/>
-
-     <div id="navbar" class="alwaysSmaller">
-     	<a href="./">
-     		<div id="logo"></div>
-     	</a>
-
-     	<div id="menu">
-     		<div id="menuToggler">
-     			<i class="fa fa-bars"></i>
-     		</div>
-     		<div id="menuItems">
-     			<a class="menuItem" href="./"><i class="fa fa-home"></i> Home</a>
-     			<a class="menuItem" href="md_projects.html"><i class="fa fa-gamepad"></i> Projects and games</a>
-     		<a class="menuItem" href="md_credits.html"><i class="fa fa-users"></i> Credits</a>
-     		<a class="menuItem" href="md_license.html"><i class="fa fa-balance-scale"></i> License</a>
-     		</div>
-     	</div>
-
-     	<script src="js/navbar.js"></script>
-     </div>
-		
-		<div class="fluid-row" id="header">
-
-						
-			
-		</div>
-
-		
-		<script type="text/javascript">
-  var navbar= document.querySelector('#navbar');
-  navbar.classList.remove("alwaysSmaller");
-
-  var mainContainer = document.querySelector('.main-container');
-  mainContainer.style.paddingTop = "180px";
-  </script>
-  
-<link rel="stylesheet" type="text/css" href="css/zz_md_index.css"/>
-<link rel="stylesheet" type="text/css" href="css/image_gallery.css"/>
-
-<div id="imagesCarousel" class="carousel slide" data-ride="carousel" data-interval="15000" style="width:100%;">
-	<ol class="carousel-indicators">
-		<li data-target="#imagesCarousel" data-slide-to="0" class="active"></li>
-		<li data-target="#imagesCarousel" data-slide-to="1"></li>
-		<li data-target="#imagesCarousel" data-slide-to="2"></li>
-		<li data-target="#imagesCarousel" data-slide-to="3"></li>
-	</ol>
-	<div class="carousel-inner">
-		<div class="carousel-item active">
-			<img class="d-block w-100" src="images/index/carousel/image1.jpg" alt=""></img>
-		</div>
-		<div class="carousel-item">
-			<img class="d-block w-100" src="images/index/carousel/image2.jpg" alt=""></img>
-		</div>
-		<div class="carousel-item">
-			<img class="d-block w-100" src="images/index/carousel/image3.jpg" alt=""></img>
-		</div>
-		<div class="carousel-item">
-			<a href="md_wiki_procedural_music_generator.html">
-				<img class="d-block w-100" src="images/index/carousel/image4.jpg" alt="Procedural Music Generator"></img>
-			</a>
-		</div>
-	</div>
-	<a class="carousel-control-prev" href="#imagesCarousel" role="button" data-slide="prev">
-		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		<span class="sr-only">Previous</span>
-	</a>
-	<a class="carousel-control-next" href="#imagesCarousel" role="button" data-slide="next">
-		<span class="carousel-control-next-icon" aria-hidden="true"></span>
-		<span class="sr-only">Next</span>
-	</a>
-</div>
-
-  <div id="what-is-project-creation-fx" class="section level2">
-  <h2><strong>What is Project Creation FX</strong></h2>
-  <p>Project Creation FX is a Java 2D game development engine based on JavaFX technology. This tool can be used as is, without other dependencies, just add it to a Java project and start coding.</p>
-  <p>The main aim of this project is to work as a common foundation for any game. This gives a lot of advantages and makes code easier to understand. In addition, games can be coded in Java and be run on any desktop system.</p>
-  <p>This framework has been created with the idea of use 2D graphics, thus 3D graphics are not a future plan.</p>
-  </div>
-  <div id="what-project-creation-fx-can-do" class="section level2">
-  <h2><strong>What Project Creation FX can do</strong></h2>
-  <p>This is the list of main features that are already included in Project Creation FX.</p>
-  
-<div class="list-custom">
-	<div class="features_list">
-		<div class="features_block">
-			<div class="features_cell">
-				<i class="fa fa-cogs features_icon"></i>
-				<div class="features_content">
-
-  <p><strong>Gameplay utilities</strong></p>
-  <ul>
-  <li>Multiple game states</li>
-  <li>Entity creation using components and modules</li>
-  <li>2D collisions detection</li>
-  <li>Background compositions and parallax</li>
-  <li>Dynamic 2D real time lighting system</li>
-  <li>Customizable particle systems and animations</li>
-  <li>AI based on state machines and steering behaviours</li>
-  </ul>
-  
-				</div>
-			</div>
-			<div class="features_cell">
-				<i class="fa fa-desktop  features_icon"></i>
-				<div class="features_content">
-					
-  <p><strong>User interface</strong></p>
-  <ul>
-  <li>Customizable keyboard and mouse control</li>
-  <li>UI components and layouts</li>
-  <li>JavaFX <code>fxml</code> files support</li>
-  <li>Custom CSS classes and stylesheets</li>
-  <li>Loading screens</li>
-  </ul>
-  
-				</div>
-			</div>
-		</div>
-		<div class="features_block">
-			<div class="features_cell">
-				<i class="fa fa-puzzle-piece features_icon"></i>
-				<div class="features_content">
-
-  <p><strong>Modules</strong></p>
-  <ul>
-  <li>Logging system with exceptions and errors handlers</li>
-  <li>Internationalization and localization utilities</li>
-  <li>Message passing interface</li>
-  </ul>
-  
-				</div>
-			</div>
-			<div class="features_cell">
-				<i class="fa fa-music features_icon"></i>
-				<div class="features_content">
-
-  <p><strong>Sound</strong></p>
-  <ul>
-  <li>Custom sound manager (<code>wav</code> and <code>ogg</code>)</li>
-  <li>Global and 2D point sounds</li>
-  <li>Procedural music generation system</li>
-  </ul>
-  
-				</div>
-			</div>
-		</div>
-		<div class="features_block">
-			<div class="features_cell">
-				<i class="fa fa-code features_icon"></i>
-				<div class="features_content">
-
-  <p><strong>Scripts</strong></p>
-  <ul>
-  <li>Write scripting files using JavaScript</li>
-  <li>Create custom cut scenes, IA behaviors or a modding API for your game</li>
-  </ul>
-  
-				</div>
-			</div>
-			<div class="features_cell">
-				<i class="far fa-object-group features_icon"></i>
-				<div class="features_content">
-
-  <p><strong>Integrations</strong></p>
-  <ul>
-  <li><a href="http://www.mapeditor.org/">Tiled</a> map editor support</li>
-  <li><a href="https://help.github.com/articles/about-gists/">GitHub Gist</a> read and write support</li>
-  <li><code>xml</code>, <code>json</code> and <code>ini</code> files support</li>
-  </ul>
-  
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-  </div>
-  <div id="how-games-done-with-project-creation-fx-look-like" class="section level2">
-  <h2><strong>How games done with Project Creation FX look like</strong></h2>
-  <p><span style="color:#777777"><i class="fa fa-magic"></i> <em>Click on the images to see them in movement.</em></span></p>
-  
-<div class="image_gallery">
-	<a href="images/index/gallery/img1.gif" data-lightbox="image-gallery-1" data-title="Run for your life - Menu">
-		<img class="image_gallery_size3" src="images/index/gallery/img1.jpg">
-	</a>
-	<a href="images/index/gallery/img2.gif" data-lightbox="image-gallery-1" data-title="Run for your life - Gameplay">
-		<img class="image_gallery_size3" src="images/index/gallery/img2.jpg">
-	</a>
-	<a href="images/index/gallery/img3.gif" data-lightbox="image-gallery-1" data-title="Platformer prototype - Gameplay">
-		<img class="image_gallery_size3" src="images/index/gallery/img3.jpg">
-	</a> <!-- -->
-	<a href="images/index/gallery/img4.gif" data-lightbox="image-gallery-1" data-title="Particle system prototype - Fire flames and falling snow rendering in real time">
-		<img class="image_gallery_size2" src="images/index/gallery/img4.jpg">
-	</a>
-	<a href="images/index/gallery/img7.gif" data-lightbox="image-gallery-1" data-title="Solar system prototype - Use of polar coordinates">
-		<img class="image_gallery_size2" src="images/index/gallery/img7.jpg">
-	</a> <!-- -->
-	<a href="images/index/gallery/img6.gif" data-lightbox="image-gallery-1" data-title="Parallax prototype - Speed of each layer is distance dependent">
-		<img class="image_gallery_size3" src="images/index/gallery/img6.jpg">
-	</a>
-	<a href="images/index/gallery/img8.gif" data-lightbox="image-gallery-1" data-title="Steering behaviors prototype - Ship wandering. Offscreen markers for other ships">
-		<img class="image_gallery_size3" src="images/index/gallery/img8.jpg">
-	</a>
-	<a href="images/index/gallery/img5.gif" data-lightbox="image-gallery-1" data-title="Lighting prototype - Multiple lights sources generating shadows in real time">
-		<img class="image_gallery_size3" src="images/index/gallery/img5.jpg">
-	</a>
-	<a href="images/index/gallery/img10.gif" data-lightbox="image-gallery-1" data-title="Lighting prototype - Normal map lighting">
-		<img class="image_gallery_size2" src="images/index/gallery/img10.jpg">
-	</a>
-	<a href="images/index/gallery/img9.gif" data-lightbox="image-gallery-1" data-title="Pong game prototype with lights, animations and dinamic sprites color change">
-		<img class="image_gallery_size2" src="images/index/gallery/img9.jpg">
-	</a>
-</div>
-
-  <p>You can find the complete <a href="md_projects.html">list of projects done using Project Creation FX here</a>.</p>
-  </div>
-  <div id="what-inspired-me-to-create-project-creation-fx" class="section level2">
-  <h2><strong>What inspired me to create Project Creation FX</strong></h2>
-  <p>This is a <a href="md_credits.html">list of links and sources</a> that I have used to create Project Creation FX.</p>
-  </div>
-  <div id="why-i-am-creating-project-creation-fx" class="section level2">
-  <h2><strong>Why I am creating Project Creation FX</strong></h2>
-  <p>To learn how games work. This project has give me a lot of experience solving all kind of problems. It started as a 2D simple game, but soon I realized that I could create a common project for multiple games. That was the beginning of Project Creation FX.</p>
-  <p>Playing video games understanding what is happening inside makes you see them in a different way. This project has a lot of ideas from very different places: details from a game, ideas from a blog post, or features from a tutorial. To sum up, all work has been done just for entertainment in my free time. So, I hope you all enjoy this.</p>
-  <p>I know that there are other engines out there that can do the same or even more and better things; but this is my personal project. As I said, I only pretend to learn as much as I can while the project evolves with me and my knowledge. This is the main reason why this project comes with no warranty or any kind of liability.</p>
-  </div>
-  <div id="who-i-am" class="section level2">
-  <h2><strong>Who I am</strong></h2>
-  <p>You can <a href="http://cjpelaezrivas.tk">visit my CV</a> to know more about me.</p>
-  </div>
-
-		
-					<link rel="stylesheet" type="text/css" href="css/footer.css"/>
-
-     <div id="footer_message">
-     	Found an error or misspell? <a href="mailto:prlazarus.info@gmail.com"> Send me an email</a> to correct it</a>. Thank you.
-     </div>
-     <div id="footer">
-     	<div class="content">
-     		<div id="logo_footer">
-     			<a href="https://prlazarus.tk"><img src="images/logo_prlazarus.png" alt="prLázarus logo footer" style="margin-top:10px;"/></a>
-     			<!-- <span class="text" style="display:block; text-align:center; margin-top:-4px;">© 2015 - 2018</span> -->
-     		</div>
-     		<div id="right_column" class="text">
-     			<br>
-     			Developed in <a href="https://en.wikipedia.org/wiki/Spain"><img src="images/spain.png" style="margin: -2px 2px 0 2px;" alt="Spain flag"/></a> with <i class="fa fa-heart" style="color:#cc0000"></i> by <i><a href="http://prlazarus.tk">prLázarus</a></i><br>
-     			<i class="fa fa-plug"></i> Site powered by <i><a href="http://rmarkdown.rstudio.com/index.html">R Markdown</a></i> and <i><a href="https://pages.github.com/">GitHub Pages</a></i><br>
-     			<a href="mailto:prlazarus.info@gmail.com">prlazarus.info@gmail.com</a>
-     		</div>
-     	</div>
-     </div>
-		
-	</div>
-</body>
+      <!--html_preserve-->
+      <div class="image_gallery">
+        <a href="media/images/index/gallery/img1.gif" data-lightbox="image-gallery-1" data-title="Run for your life - Menu">
+          <img class="image_gallery_size3" src="media/images/index/gallery/img1.jpg">
+        </a>
+        <a href="media/images/index/gallery/img2.gif" data-lightbox="image-gallery-1" data-title="Run for your life - Gameplay">
+          <img class="image_gallery_size3" src="media/images/index/gallery/img2.jpg">
+        </a>
+        <a href="media/images/index/gallery/img3.gif" data-lightbox="image-gallery-1" data-title="Platformer prototype - Gameplay">
+          <img class="image_gallery_size3" src="media/images/index/gallery/img3.jpg">
+        </a>
+ <!-- -->
+        <a href="media/images/index/gallery/img4.gif" data-lightbox="image-gallery-1" data-title="Particle system prototype - Fire flames and falling snow rendering in real time">
+          <img class="image_gallery_size2" src="media/images/index/gallery/img4.jpg">
+        </a>
+        <a href="media/images/index/gallery/img7.gif" data-lightbox="image-gallery-1" data-title="Solar system prototype - Use of polar coordinates">
+          <img class="image_gallery_size2" src="media/images/index/gallery/img7.jpg">
+        </a>
+ <!-- -->
+        <a href="media/images/index/gallery/img6.gif" data-lightbox="image-gallery-1" data-title="Parallax prototype - Speed of each layer is distance dependent">
+          <img class="image_gallery_size3" src="media/images/index/gallery/img6.jpg">
+        </a>
+        <a href="media/images/index/gallery/img8.gif" data-lightbox="image-gallery-1" data-title="Steering behaviors prototype - Ship wandering. Offscreen markers for other ships">
+          <img class="image_gallery_size3" src="media/images/index/gallery/img8.jpg">
+        </a>
+        <a href="media/images/index/gallery/img5.gif" data-lightbox="image-gallery-1" data-title="Lighting prototype - Multiple lights sources generating shadows in real time">
+          <img class="image_gallery_size3" src="media/images/index/gallery/img5.jpg">
+        </a>
+        <a href="media/images/index/gallery/img10.gif" data-lightbox="image-gallery-1" data-title="Lighting prototype - Normal map lighting">
+          <img class="image_gallery_size2" src="media/images/index/gallery/img10.jpg">
+        </a>
+        <a href="media/images/index/gallery/img9.gif" data-lightbox="image-gallery-1" data-title="Pong game prototype with lights, animations and dinamic sprites color change">
+          <img class="image_gallery_size2" src="media/images/index/gallery/img9.jpg">
+        </a>
+      </div> <!--/html_preserve-->
+      <p>You can find the complete <a href="md_projects.html">list of projects done using Project Creation FX here</a>.</p>
+      <h2 id="what-inspired-me-to-create-project-creation-fx"><strong>What inspired me to create Project Creation FX</strong></h2>
+      <p>This is a <a href="md_credits.html">list of links and sources</a> that I have used to create Project Creation FX.</p>
+      <h2 id="why-i-am-creating-project-creation-fx"><strong>Why I am creating Project Creation FX</strong></h2>
+      <p>To learn how games work. This project has give me a lot of experience solving all kind of problems. It started as a 2D simple game, but soon I realized that I could create a common project for multiple games. That was the beginning of Project Creation FX.</p>
+      <p>Playing video games understanding what is happening inside makes you see them in a different way. This project has a lot of ideas from very different places: details from a game, ideas from a blog post, or features from a tutorial. To sum up, all work has been done just for entertainment in my free time. So, I hope you all enjoy this.</p>
+      <p>I know that there are other engines out there that can do the same or even more and better things; but this is my personal project. As I said, I only pretend to learn as much as I can while the project evolves with me and my knowledge. This is the main reason why this project comes with no warranty or any kind of liability.</p>
+      <h2 id="who-i-am"><strong>Who I am</strong></h2>
+      <p>You can <a href="https://cjpelaezrivas.dev">visit my CV</a> to know more about me.</p>
+      <link rel="stylesheet" type="text/css" href="static/css/footer.css" />
+      <div id="footer_message">
+        Found an error or misspell? <a href="mailto:prlazarus.info@gmail.com"> Send me an email</a> to correct it</a>. Thank you.
+      </div>
+      <div id="footer">
+        <div class="content">
+          <div id="logo_footer">
+            <a href="https://prlazarus.es"><img src="media/images/logo_prlazarus.png" alt="prLázarus logo footer" style="margin-top:10px;" /></a>
+          </div>
+          <div id="right_column" class="text">
+            <br>
+            Developed in <a href="https://en.wikipedia.org/wiki/Spain"><img src="media/images/spain.png" style="margin: -2px 2px 0 2px;" alt="Spain flag" /></a> with <i class="fa fa-heart" style="color:#cc0000"></i> by <i><a href="https://prlazarus.es">prLázarus</a></i><br>
+            <i class="fa fa-plug"></i> Site powered by <i><a href="https://cjpelaezrivas.dev/Lighthouse/">Lighthouse</a></i> and <i><a href="https://pages.github.com/">GitHub Pages</a></i><br>
+            <a href="mailto:prlazarus.info@gmail.com">prlazarus.info@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
